@@ -1,0 +1,19 @@
+changelog Atmoduino4teensy : Adapted By Azzuro (alias Romain) (MediaPortal forum)
+Atmowin support for Teensy 2.0 + Adalight LED strip bullet WS2801
+
+Thanks To Kestouf for AmbiTV ( http://www.mediahd.fr/34-ambitv ) 
+Thanks to RickDB (Rick164 on MediaPortal forum) dor atmoduino MOD / Angie05 / gemx ...
+
+Flash with Arduino IDE 1.0.3 and TeensyDuino 1.11
+replace FastSPI librairy with FastSPI_LED_4_teensy_2 in Arduino/librairy/FastSPI 
+
+or use .HEX file directly with Teensy Loader
+
+V1 :
+fonctionnement minimal
+
+V2 : 
+Ajout d'un tester de LED, au branchement de la Teensy.
+
+V3: Pour test seulement
+Baudrate : 250000 ko

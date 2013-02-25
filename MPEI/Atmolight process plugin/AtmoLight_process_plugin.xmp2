@@ -1795,7 +1795,7 @@ public static void Main(PackageClass packageClass, UnInstallItem item)
   <GeneralInfo>
     <Name>AtmoLight process plugin</Name>
     <Id>8d2c6d9d-03c8-4144-b0b8-85e3a2b0e001</Id>
-    <Author>gemx / Angie05 (plugin), RickDB (Atmoduino), legnod (installer)</Author>
+    <Author>gemx / Angie05 (plugin), RickDB (Atmoduino), legnod (installer), azzuro(Teensy)</Author>
     <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
     <ForumPage>http://forum.team-mediaportal.com/threads/new-plugin-atmolight-process-plugin-update-25-05-2010-v1-9.75840/</ForumPage>
     <UpdateUrl>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=262&amp;cf_id=52</UpdateUrl>
@@ -1823,7 +1823,7 @@ Because of this, the processed picture data needs up to 3 times more CPU power!!
     <OnlineLocation>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=262&amp;cf_id=24</OnlineLocation>
     <ReleaseDate>2013-01-21T10:45:58.3479813+01:00</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
-    <Location>D:\svnroot\Mediaportal\ambilight-4-mediaportal\MPEI\Atmolight process plugin\AtmoLight_1.9.0.15 t.mpe1</Location>
+    <Location>AtmoLight_1.9.0.15.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -1832,7 +1832,7 @@ Because of this, the processed picture data needs up to 3 times more CPU power!!
           <Description>The icon file of the package (jpg,png,bmp)</Description>
         </SectionParam>
         <SectionParam Name="Online Icon">
-          <Value />
+          <Value>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmolight%20process%20plugin/image/atmolight.png</Value>
           <ValueType>String</ValueType>
           <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
         </SectionParam>
@@ -3143,21 +3143,21 @@ Because of this, the processed picture data needs up to 3 times more CPU power!!
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\sedu.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{3019bd1d-aca2-4acc-9bbd-fbcb73a2d0a0}-sedu.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{cd223156-6e82-4577-be38-4453e8685972}-sedu.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\Arduino.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{3d5e6395-9da8-4688-986b-0b4070a92c03}-Arduino.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{fdbf64cf-cf0d-4859-a994-d43e73748fdb}-Arduino.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\atmolight.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{32c96d37-fcb3-448e-a5da-ca6118670651}-atmolight.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{4459f905-51ec-45a7-8e4b-76a4537f3368}-atmolight.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>
@@ -3196,7 +3196,7 @@ Because of this, the processed picture data needs up to 3 times more CPU power!!
       </FolderGroup>
     </FolderGroups>
     <ProjectFilename>AtmoLight_process_plugin.xmp2</ProjectFilename>
-    <UpdatePath1>E:\Projekte\MePo\Ambilight\AtmoLight\atmolight_process_plugin_22.xml</UpdatePath1>
+    <UpdatePath1>update.xml</UpdatePath1>
     <UpdatePath2 />
     <UpdatePath3 />
   </ProjectSettings>

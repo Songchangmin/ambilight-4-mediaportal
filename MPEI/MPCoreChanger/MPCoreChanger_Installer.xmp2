@@ -182,8 +182,10 @@ public class Script
         // wird eine zusätzliche Überprüfung nach dem Datum der letzten Änderung der Dateien benötigt
         String[] ModCoreVersions = new String[4] { "1.2.0.0", "1.2.100.0", "1.2.200.449", "1.2.300.196" };
 
-        //Backup der vorhandenen core.dll und speicherung unter \\Backup\
+        //delete old sourcefiles if needed
+        deleteOld();
 
+        //Backup der vorhandenen core.dll und speicherung unter \\Backup\
         if (File.Exists(Path.Combine(BackupFilePath, "core.dll")))
         {
            //Debug ausgabe
@@ -283,8 +285,25 @@ public class Script
         }
         return false;
     }
-}
-</Value>
+
+    public static void deleteOld()
+    {
+        String OldSourceFilePath;
+        OldSourceFilePath = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), @"plugins\AtmoLight\"); 
+        try
+        {
+            if (Directory.Exists(OldSourceFilePath)) ;
+            {
+                Directory.Delete(OldSourceFilePath, true);
+            }
+        }
+
+        catch{}
+
+        return;
+    }
+
+}</Value>
                     <ValueType>Script</ValueType>
                     <Description />
                   </SectionParam>
@@ -310,7 +329,7 @@ using System.Diagnostics;
             BackupFilePath = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "backup");
 
             String SourceFilePath;
-            SourceFilePath = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), @"plugins\MPCore_changer\");
+            SourceFilePath = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), @"plugins\MPCoreChanger\");
 
             try
             {
@@ -448,11 +467,11 @@ ToDo:
     <OnlineLocation />
     <ReleaseDate>2013-02-10T01:00:24.1271174+01:00</ReleaseDate>
     <Tags>atmolight, ambilight, sedu-board, teensy2, atmoduino</Tags>
-    <Location>E:\Projekte\MePo\ambilight-4-mediaportal\MPEI\MP core changer\MP_core_changer.mpe1</Location>
+    <Location>E:\Projekte\GIT\ambilight-4-mediaportal\MPEI\MP core changer\MPCoreChanger_1.9.0.16_beta.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
-          <Value />
+          <Value>image\atmolight.png</Value>
           <ValueType>File</ValueType>
           <Description>The icon file of the package (jpg,png,bmp)</Description>
         </SectionParam>
@@ -539,6 +558,13 @@ ToDo:
         <ZipFileName>Installer{CopyFile}\{ce490b97-0aa0-4d7c-ad2a-60795657a8af}-Core_1.2.3_mod.dll</ZipFileName>
         <DestinationFilename>%Plugins%\MPCore_changer\1.2.3\Core_1.2.3_mod.dll</DestinationFilename>
       </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>image\atmolight.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{bfc19be7-01c6-4da7-9a4d-5f72b32d302c}-atmolight.png</ZipFileName>
+        <DestinationFilename />
+      </FileItem>
     </Items>
   </UniqueFileList>
   <ProjectSettings>
@@ -554,7 +580,7 @@ ToDo:
         <Recursive>true</Recursive>
       </FolderGroup>
     </FolderGroups>
-    <ProjectFilename>Mp_core_changer.xmp2</ProjectFilename>
+    <ProjectFilename>MPCoreChanger_Installer.xmp2</ProjectFilename>
   </ProjectSettings>
   <IsSkin>false</IsSkin>
 </PackageClass>

@@ -1,0 +1,14 @@
+changelog Atmoduino_4_Arduino : Adapted By Azzuro (alias Romain) (MediaPortal forum)
+Based on Teensy firmware ...
+Atmowin support for Arduino + WS2801 chips led
+
+Thanks to RickDB (Rick164 on MediaPortal forum) dor atmoduino MOD / Angie05 / gemx ...
+
+Flash with Arduino IDE 1.0.3
+replace FastSPI librairy with FastSPI_LED_4_Arduino in Arduino/librairy/FastSPI 
+
+
+
+V1 :
+Adapted verion from Teensy V2 firmware
+(Add TEST LED)

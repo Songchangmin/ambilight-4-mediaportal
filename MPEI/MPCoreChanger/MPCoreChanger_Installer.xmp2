@@ -479,12 +479,12 @@ ToDo:
     <Params>
       <Items>
         <SectionParam Name="Icon">
-          <Value>image\atmolight.png</Value>
+          <Value>image\MPCoreChanger.png</Value>
           <ValueType>File</ValueType>
           <Description>The icon file of the package (jpg,png,bmp)</Description>
         </SectionParam>
         <SectionParam Name="Online Icon">
-          <Value>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmolight%20process%20plugin/image/atmolight.png</Value>
+          <Value>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/MPCoreChanger/image/MPCoreChanger.png</Value>
           <ValueType>String</ValueType>
           <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
         </SectionParam>
@@ -569,8 +569,8 @@ ToDo:
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>image\atmolight.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{cbe40798-225c-40ea-85e8-80cdbaae51b9}-atmolight.png</ZipFileName>
+        <LocalFileName>image\MPCoreChanger.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{338f5164-24bf-41b9-bf58-d21c50a7a807}-MPCoreChanger.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>
@@ -589,7 +589,7 @@ ToDo:
       </FolderGroup>
     </FolderGroups>
     <ProjectFilename>MPCoreChanger_Installer.xmp2</ProjectFilename>
-    <UpdatePath1>E:\Projekte\GIT\ambilight-4-mediaportal\MPEI\MPCoreChanger\MPCoreChanger_update.xml</UpdatePath1>
+    <UpdatePath1>MPCoreChanger_update.xml</UpdatePath1>
     <UpdatePath2 />
     <UpdatePath3 />
   </ProjectSettings>

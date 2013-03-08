@@ -1,0 +1,46 @@
+ef2269877f405af265815e9ceed5ba0984f46c90
+ mediaportal/Core/Player/FrameGrabber.cs | 24 +++++++++++++++++++++---
+ 1 file changed, 21 insertions(+), 3 deletions(-)
+
+diff --git a/mediaportal/Core/Player/FrameGrabber.cs b/mediaportal/Core/Player/FrameGrabber.cs
+index 43da50b..0c9bfdb 100644
+--- a/mediaportal/Core/Player/FrameGrabber.cs
++++ b/mediaportal/Core/Player/FrameGrabber.cs
+@@ -45,8 +45,13 @@ namespace MediaPortal
+     private static FrameGrabber instance = null;
+ 
+     private FrameGrabber() {}
+-
+-    public static FrameGrabber GetInstance()
++	
++	//Start* Line Code for Ambilight System Capture (Atmolight)
++	public delegate void NewFrameHandler(Int16 width, Int16 height, Int16 arWidth, Int16 arHeight, uint pSurface);
++    public event NewFrameHandler OnNewFrame;
++	//End* Ambilight Capture
++	
++	public static FrameGrabber GetInstance()
+     {
+       if (instance == null)
+       {
+@@ -122,7 +127,20 @@ namespace MediaPortal
+     /// <param name="pSurface"></param>
+     public void OnFrame(Int16 width, Int16 height, Int16 arWidth, Int16 arHeight, uint pSurface)
+     {
+-      // Is GetCurrentImage() requesting a frame grab?
++//Start* Line Code for Ambilight System Capture (Atmolight)
++	  if (OnNewFrame != null)
++      {
++       try
++        {
++          OnNewFrame(width, height, arWidth, arHeight, pSurface);
++        }
++        catch(Exception)
++        {
++        }
++      } 
++ //End* Ambilight Capture code
++ 
++	  // Is GetCurrentImage() requesting a frame grab?
+       if (!grabSample || width == 0 || height == 0)
+       {
+         return;

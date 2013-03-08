@@ -1333,6 +1333,23 @@
           </Items>
         </Files>
       </GroupItem>
+      <GroupItem Name="ExtensionsPlugin">
+        <ParentGroup>Plugin Files</ParentGroup>
+        <DisplayName>Extensions Plugin</DisplayName>
+        <DefaulChecked>false</DefaulChecked>
+        <Description>The Extensions Plugin allows configuration and update of OnlineVideos (and other Plugins) from within MediaPortal.</Description>
+        <Files>
+          <Items>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>settings\extension_settings.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{846d9761-bfa4-4c0a-9eab-c9c64898df2c}-extension_settings.xml</ZipFileName>
+              <DestinationFilename>%Base%\extension_settings.xml</DestinationFilename>
+            </FileItem>
+          </Items>
+        </Files>
+      </GroupItem>
     </Items>
   </Groups>
   <Sections>
@@ -1651,19 +1668,6 @@ public static void Main(PackageClass packageClass, UnInstallItem item)
               </Params>
               <ExecuteLocation>AfterPanelHide</ExecuteLocation>
             </ActionItem>
-            <ActionItem Name="ConfigurePlugin" ActionType="ConfigurePlugin" ConditionGroup="Plugin Files">
-              <Params>
-                <Items>
-                  <SectionParam Name="Path to plugin">
-                    <Value>%Plugins%\process\atmolight.dll</Value>
-                    <ValueType>Template</ValueType>
-                    <Description>Path to the plugin like 
- %Plugins%\Windows\plugin.dll</Description>
-                  </SectionParam>
-                </Items>
-              </Params>
-              <ExecuteLocation>AfterPanelHide</ExecuteLocation>
-            </ActionItem>
             <ActionItem Name="Script" ActionType="Script" ConditionGroup="">
               <Params>
                 <Items>
@@ -1749,7 +1753,7 @@ public class Script
                     <Description>Minimum Version of the extension package - older versions will be updated (only used when downloading via Id).</Description>
                   </SectionParam>
                   <SectionParam Name="Silent Install">
-                    <Value />
+                    <Value>YES</Value>
                     <ValueType>Bool</ValueType>
                     <Description>Silent install, No wizard screen will be displayed </Description>
                   </SectionParam>
@@ -1927,7 +1931,7 @@ Because of this, the processed picture data needs up to 3 times more CPU power!!
     <OnlineLocation>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=262&amp;cf_id=24</OnlineLocation>
     <ReleaseDate>2013-01-21T10:45:58.3479813+01:00</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
-    <Location>AtmoLight_1.9.0.16.mpe1</Location>
+    <Location>AtmoLight_1.9.0.16_beta.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -3243,25 +3247,32 @@ Because of this, the processed picture data needs up to 3 times more CPU power!!
         <ZipFileName>Installer{CopyFile}\{b0231cc9-1a65-43f5-a26d-606015791c6b}-atmo_static.bat</ZipFileName>
         <DestinationFilename>%Config%\Atmowin\atmo_static.bat</DestinationFilename>
       </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>settings\extension_settings.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{846d9761-bfa4-4c0a-9eab-c9c64898df2c}-extension_settings.xml</ZipFileName>
+        <DestinationFilename>%Base%\extension_settings.xml</DestinationFilename>
+      </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\sedu.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{4d6ce55a-9899-4124-9589-a9f3a51765d2}-sedu.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{6a1b0b81-b98a-43dd-a7f1-55e69eef818d}-sedu.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\Arduino.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{2381d75e-8060-4579-b88c-4057c9da96e0}-Arduino.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{33d398cc-45f0-460e-a98e-26de8cbbacf4}-Arduino.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\atmolight.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{f3c47e12-a905-4df3-90f4-83873b6f8333}-atmolight.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{31edb63d-3a4a-4b89-93cf-c61559845eec}-atmolight.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

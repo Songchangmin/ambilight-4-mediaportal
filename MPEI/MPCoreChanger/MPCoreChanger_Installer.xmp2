@@ -66,6 +66,20 @@
               <ZipFileName>Installer{CopyFile}\{9c16f5a7-6f4e-4f0e-9123-1eee1d6141c8}-Core_1.2.3_mod.dll</ZipFileName>
               <DestinationFilename>%Base%\plugins\MPCoreChanger\1.2.3\Core_1.2.3_mod.dll</DestinationFilename>
             </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\..\MediaPortal\Core\1.3.0_final\Core.1.3.0_final_mod.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{3491b010-7de3-466c-bf8a-0cb4b94b6a27}-Core.1.3.0_final_mod.dll</ZipFileName>
+              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_final\Core.1.3.0_final_mod.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\..\MediaPortal\Core\1.3.0_final\Core_1.3.0_final_mod_old.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c1959e98-a691-4e47-86fd-6095c56516ab}-Core_1.3.0_final_mod_old.dll</ZipFileName>
+              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_final\Core_1.3.0_final_mod_old.dll</DestinationFilename>
+            </FileItem>
           </Items>
         </Files>
       </GroupItem>
@@ -173,14 +187,14 @@ public class Script
         Boolean OldCoreInstalled;
 
         //Array für die unterstützt MediaPortal Versionen + Zuweisung der versionen
-        String[] MPVersions = new String[4] { "1.2.3", "1.3.0_alpha", "1.3.0_beta", "1.3.0_rc" };
+        String[] MPVersions = new String[5] { "1.2.3", "1.3.0_alpha", "1.3.0_beta", "1.3.0_rc", "1.3.0_final" };
 
         //Array für die bekannten Versionen der original core.dll Dateien + Zuweisung
-        String[] OrgCoreVersions = new String[4] { "1.2.3.0", "1.2.100.0", "1.2.200.0", "1.2.300.0" };
+        String[] OrgCoreVersions = new String[5] { "1.2.3.0", "1.2.100.0", "1.2.200.0", "1.2.300.0", "1.3.0.0" };
 
         //Array für die bekannten Dateiversioen der modifizierten core.dll Dateien (leider nicht immer unterschiedlich zu den orginalen Versionen daher
         // wird eine zusätzliche Überprüfung nach dem Datum der letzten Änderung der Dateien benötigt
-        String[] ModCoreVersions = new String[4] { "1.2.0.0", "1.2.100.0", "1.2.200.449", "1.2.300.196" };
+        String[] ModCoreVersions = new String[5] { "1.2.0.0", "1.2.100.0", "1.2.200.449", "1.2.300.196","1.3.0.200" };
 
         //delete old sourcefiles if needed
         deleteOld();
@@ -565,6 +579,20 @@ ToDo:
         <LocalFileName>..\..\MediaPortal\Core\1.2.3\Core_1.2.3_mod.dll</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{9c16f5a7-6f4e-4f0e-9123-1eee1d6141c8}-Core_1.2.3_mod.dll</ZipFileName>
         <DestinationFilename>%Base%\plugins\MPCoreChanger\1.2.3\Core_1.2.3_mod.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\..\MediaPortal\Core\1.3.0_final\Core.1.3.0_final_mod.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{3491b010-7de3-466c-bf8a-0cb4b94b6a27}-Core.1.3.0_final_mod.dll</ZipFileName>
+        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_final\Core.1.3.0_final_mod.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\..\MediaPortal\Core\1.3.0_final\Core_1.3.0_final_mod_old.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c1959e98-a691-4e47-86fd-6095c56516ab}-Core_1.3.0_final_mod_old.dll</ZipFileName>
+        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_final\Core_1.3.0_final_mod_old.dll</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />

@@ -1,3 +1,9 @@
+Version 1.0.0.2
+
+- installer is now "silent" (no message boxes)
+- added support (beta) for MediaPortal 1.3.0 Final
+- added new icon/ onlineicon
+
 Version 1.0.0.1
 
 Initial release!

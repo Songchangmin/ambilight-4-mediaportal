@@ -1912,26 +1912,26 @@ public class Script
     <UpdateUrl>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=262&amp;cf_id=52</UpdateUrl>
     <Version>
       <Major>1</Major>
-      <Minor>1</Minor>
+      <Minor>0</Minor>
       <Build>19014</Build>
       <Revision>1</Revision>
     </Version>
-    <ExtensionDescription>Plugin for using AtmoWin Ambilight Software with MediaPortal. No need to switch AERO off anymore! 
-
+    <ExtensionDescription>Plugin for using AtmoWin Ambilight Software with MediaPortal. No need to switch AERO off anymore! 
+
 AtmoLight needs an additional plugin (MPCoreChanger) which will be installed/updated automatically while installing!!! </ExtensionDescription>
-    <VersionDescription>New version of AtmoWin (angie05 mod) added! His mod now supports up to 256 LEDs. 
-
-!!! SEDU-Board V2 (Firmware 3.0), SEDU-Board V1 with DMX_WS2801 Firmware needed or other DMX/ WS2801 controller with at least 768 Channels (extended MiniDMX)!!!
-
-Changelog:
-- supports now up to 256 LED`s via miniDMX protocol
-- The maximum LED count per side (64 horizontal/ 48 LED`s vertical) has been raised to 128 / 64.
+    <VersionDescription>New version of AtmoWin (angie05 mod) added! His mod now supports up to 256 LEDs. 
+
+!!! SEDU-Board V2 (Firmware 3.0), SEDU-Board V1 with DMX_WS2801 Firmware needed or other DMX/ WS2801 controller with at least 768 Channels (extended MiniDMX)!!!
+
+Changelog:
+- supports now up to 256 LED`s via miniDMX protocol
+- The maximum LED count per side (64 horizontal/ 48 LED`s vertical) has been raised to 128 / 64.
 Because of this, the processed picture data needs up to 3 times more CPU power!!! You may check the "low   cpu" option inside the MediaPortal plugin configuration!</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=262&amp;cf_id=24</OnlineLocation>
     <ReleaseDate>2013-01-21T10:45:58.3479813+01:00</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
-    <Location>AtmoLight_1.9.0.16_beta.mpe1</Location>
+    <Location>AtmoLight_1.0.19014.1_beta.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -3258,21 +3258,21 @@ Because of this, the processed picture data needs up to 3 times more CPU power!!
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\sedu.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{6a1b0b81-b98a-43dd-a7f1-55e69eef818d}-sedu.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{2fc28a3e-abcc-470e-b179-3d654e3ad0f1}-sedu.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\Arduino.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{33d398cc-45f0-460e-a98e-26de8cbbacf4}-Arduino.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{332e31f9-2ed6-4059-abc8-64e02b1a7548}-Arduino.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\atmolight.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{31edb63d-3a4a-4b89-93cf-c61559845eec}-atmolight.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{d6feb88d-24c5-48e1-89f8-4d31f84d861e}-atmolight.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

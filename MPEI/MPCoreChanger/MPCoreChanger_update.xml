@@ -55,24 +55,25 @@
           <Major>1</Major>
           <Minor>0</Minor>
           <Build>0</Build>
-          <Revision>1</Revision>
+          <Revision>2</Revision>
         </Version>
         <ExtensionDescription>For easier update support for new core.dll files!
 
 Replaces the installed core.dll with an modified one to enable support for the AtmoLight Plugin!</ExtensionDescription>
-        <VersionDescription>Initial release!
+        <VersionDescription>1.0.0.2
 
-ToDo:
-- At the moment every core.dll for every supported version will be copied to the harddrive. For further releases the core changer should download only the needed core file from internet.</VersionDescription>
+- Added extensions support (Atmolight config inside MP)
+- Bug Fixes + silent installer
+- Added beta support for Media Portal 1.3.0 final</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
         <OnlineLocation>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=266&amp;cf_id=24</OnlineLocation>
         <ReleaseDate>2013-02-10T01:00:24.1271174+01:00</ReleaseDate>
-        <Tags>atmolight, ambilight, sedu-board, teensy2, atmoduino</Tags>
-        <Location>MPCoreChanger_1.0.0.1.mpe1</Location>
+        <Tags>atmolight, ambilight, sedu-board, teensy2, atmoduino, led</Tags>
+        <Location>MPCoreChanger_1.0.0.2.mpe1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">
-              <Value>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmolight%20process%20plugin/image/atmolight.png</Value>
+              <Value>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/MPCoreChanger/image/MPCoreChanger.png</Value>
               <ValueType>String</ValueType>
               <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
             </SectionParam>

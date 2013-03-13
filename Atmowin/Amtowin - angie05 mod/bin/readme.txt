@@ -1,11 +1,11 @@
 Modded AtmoWin Version by Angie05 - based on AtmoWin v0.51
 
 !!! SEDU Firmware Ver. 3.0 required !!!
-or atmo controller with at least 512 Channels (extended MiniDMX)
+or atmo controller with at least 768 Channels (extended MiniDMX)
 
 changes:
 
-- 170 LEDs with MiniDMX
+- 256 LEDs with MiniDMX
 - Edge weighting adjustable level increased (more weight to the borders)
 - Brightness adjustable level increased (lower levels)
 - Darkness Limit inverted (threshold value of Color which remains black, try 10, 0=off) 

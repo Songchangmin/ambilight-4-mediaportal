@@ -1,4 +1,4 @@
-Version 1.1.19014.1 (currently beta)
+Version 1.1.19014.1
 
 PLEASE Uninstall the AtmoLight plugin version 1.9.0.15 manually with the MPEI!
 There were some bugs regarding folder creation. The unused folders will be deleted while installing the new version!

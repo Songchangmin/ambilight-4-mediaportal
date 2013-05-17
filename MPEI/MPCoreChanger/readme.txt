@@ -1,3 +1,8 @@
+Version 1.0.0.3
+
+- Added support for MediaPortal 1.4 PRE RELEASE
+- Bugfixes
+
 Version 1.0.0.2
 
 - installer is now "silent" (no message boxes)

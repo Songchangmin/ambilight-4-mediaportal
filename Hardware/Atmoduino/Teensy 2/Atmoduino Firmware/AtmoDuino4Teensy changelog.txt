@@ -1,3 +1,6 @@
+
+###########################################################################################
+
 changelog Atmoduino4teensy : Adapted By Azzuro (alias Romain) (MediaPortal forum)
 Atmowin support for Teensy 2.0 + Adalight LED strip bullet WS2801
 
@@ -9,11 +12,19 @@ replace FastSPI librairy with FastSPI_LED_4_teensy_2 in Arduino/librairy/FastSPI
 
 or use .HEX file directly with Teensy Loader
 
+############################################################################################
+
+V4: 2013-06-11 | TEST ONLY | [Arduino 1.0.5 + TeensyDuino 1.14]
+Replace FastSPi_LED lib to FastSPi_LED2 RC1
+
+V3 | TEST ONLY | 
+Baudrate : 250000 ko
+
+V2 | WORKING |
+Ajout d'un tester de LED, au branchement de la Teensy.
+
 V1 :
 fonctionnement minimal
 
-V2 : 
-Ajout d'un tester de LED, au branchement de la Teensy.
 
-V3: Pour test seulement
-Baudrate : 250000 ko
+

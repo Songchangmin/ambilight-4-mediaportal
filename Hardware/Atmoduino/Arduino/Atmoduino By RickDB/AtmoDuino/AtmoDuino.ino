@@ -18,7 +18,11 @@ void setup(){
   FastSPI_LED.setLeds(NUM_LEDS);
 
   //Change this to match your led strip
-  FastSPI_LED.setChipset(CFastSPI_LED::SPI_LPD8806);
+  //FastSPI_LED.setChipset(CFastSPI_LED::SPI_TM1809);
+  //FastSPI_LED.setChipset(CFastSPI_LED::SPI_LPD6803);
+  //FastSPI_LED.setChipset(CFastSPI_LED::SPI_HL1606);
+  //FastSPI_LED.setChipset(CFastSPI_LED::SPI_595);
+  FastSPI_LED.setChipset(CFastSPI_LED::SPI_WS2801);
   
   //Change datarate to match your led strip as well
   FastSPI_LED.setDataRate(0);

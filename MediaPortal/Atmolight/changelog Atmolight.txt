@@ -1,0 +1,5 @@
+
+19016 : processus times is slowdown for reduce CPU usage
+
+19014 : initial
+

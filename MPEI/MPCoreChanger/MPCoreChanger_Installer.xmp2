@@ -13,76 +13,6 @@
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.3.0_rc\Core.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{43742a99-c672-4f39-8731-e1b08e7744fa}-Core.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_rc\Core.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.3.0_rc\core_1.3.0_rc_mod.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{8b0f49a2-be73-43ba-84c3-0691ea0e7a0c}-core_1.3.0_rc_mod.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_rc\core_1.3.0_rc_mod.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.3.0_beta\Core.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{2960cf2b-01c8-44a4-a203-6b9ee6919c18}-Core.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_beta\Core.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.3.0_beta\core_1.3.0_beta_mod.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{3d2b13cc-accb-4b29-a343-406f99063889}-core_1.3.0_beta_mod.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_beta\core_1.3.0_beta_mod.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.3.0_alpha\Core.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{b82350cb-beb8-44e6-87bf-51945895e27e}-Core.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_alpha\Core.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.3.0_alpha\Core_1.3.0_alpha_mod.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{2970e30c-7399-4f36-a73f-fe7b3a54e347}-Core_1.3.0_alpha_mod.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_alpha\Core_1.3.0_alpha_mod.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.2.3\Core.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{72210a8b-4e50-41e3-8150-824529b9edac}-Core.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.2.3\Core.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.2.3\Core_1.2.3_mod.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{9c16f5a7-6f4e-4f0e-9123-1eee1d6141c8}-Core_1.2.3_mod.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.2.3\Core_1.2.3_mod.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.3.0_final\Core.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{d3e02e9d-20e8-40cf-962b-a9b0797b58f7}-Core.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_final\Core.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.3.0_final\Core_1.3.0_final_mod.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{2582a2d3-e27b-4605-b54a-0588d761009d}-Core_1.3.0_final_mod.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_final\Core_1.3.0_final_mod.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
               <LocalFileName>..\..\MediaPortal\Core\1.4_pre\Core.dll</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{fef9dad5-537b-4783-b3b4-d627707c409e}-Core.dll</ZipFileName>
               <DestinationFilename>%Base%\plugins\MPCoreChanger\1.4_pre\Core.dll</DestinationFilename>
@@ -93,6 +23,20 @@
               <LocalFileName>..\..\MediaPortal\Core\1.4_pre\Core_1.4_pre_mod.dll</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{3989a4ea-dbb1-4f63-b571-937021838006}-Core_1.4_pre_mod.dll</ZipFileName>
               <DestinationFilename>%Base%\plugins\MPCoreChanger\1.4_pre\Core_1.4_pre_mod.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{7c8ce420-f7ba-4fbd-9175-e7aef8d209ad}-Core.dll</ZipFileName>
+              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core_1.5_pre_mod.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{20bbe1b1-9cd0-4017-a874-5ec90687eb43}-Core_1.5_pre_mod.dll</ZipFileName>
+              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core_1.5_pre_mod.dll</DestinationFilename>
             </FileItem>
           </Items>
         </Files>
@@ -186,7 +130,7 @@ public class Script
         String ModCoreFile;
 
         String OrgCoreFile;
-        OrgCoreFile = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "core.dll");
+        OrgCoreFile = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "Core.dll");
 
         String BackupFilePath;
         BackupFilePath = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "backup");
@@ -201,38 +145,38 @@ public class Script
         Boolean OldCoreInstalled;
 
         //Array für die unterstützt MediaPortal Versionen + Zuweisung der versionen
-        String[] MPVersions = new String[6] { "1.2.3", "1.3.0_alpha", "1.3.0_beta", "1.3.0_rc", "1.3.0_final","1.4_pre" };
+        String[] MPVersions = new String[2] {"1.4_pre","1.5_pre"};
 
         //Array für die bekannten Versionen der original core.dll Dateien + Zuweisung
-        String[] OrgCoreVersions = new String[6] { "1.2.3.0", "1.2.100.0", "1.2.200.0", "1.2.300.0", "1.3.0.0","1.3.100.0" };
+        String[] OrgCoreVersions = new String[2] {"1.3.100.0","1.4.100.0" };
 
         //Array für die bekannten Dateiversioen der modifizierten core.dll Dateien (leider nicht immer unterschiedlich zu den orginalen Versionen daher
         // wird eine zusätzliche Überprüfung nach dem Datum der letzten Änderung der Dateien benötigt
-        String[] ModCoreVersions = new String[6] { "1.2.0.0", "1.2.100.0", "1.2.200.449", "1.2.300.196","1.3.0.200","1.3.100.200" };
+        String[] ModCoreVersions = new String[2] {"1.3.100.200","1.4.100.200" };
 
         //delete old sourcefiles if needed
         deleteOld();
 
         //Backup der vorhandenen core.dll und speicherung unter \\Backup\
-        if (File.Exists(Path.Combine(BackupFilePath, "core.dll")))
+        if (File.Exists(Path.Combine(BackupFilePath, "Core.dll")))
         {
            //Debug ausgabe
            //MessageBox.Show("Backup core.dll =1, Path =1");
-            File.Delete(BackupFilePath + "\\core.dll");
-            File.Copy(OrgCoreFile, BackupFilePath + "\\core.dll");
+            File.Delete(BackupFilePath + "\\Core.dll");
+            File.Copy(OrgCoreFile, BackupFilePath + "\\Core.dll");
         }
         else if (Directory.Exists(BackupFilePath))
         {
             //Debug ausgabe
-            //MessageBox.Show("Backup core.dll =0, Path =1");
-            File.Copy(OrgCoreFile, BackupFilePath + "\\core.dll");
+            //MessageBox.Show("Backup Core.dll =0, Path =1");
+            File.Copy(OrgCoreFile, BackupFilePath + "\\Core.dll");
         }
         else
         {
             Directory.CreateDirectory(BackupFilePath);
             //Debug ausgabe
-            //MessageBox.Show("Backup core.dll =0, Path = 0");
-            File.Copy(OrgCoreFile, BackupFilePath + "\\core.dll");
+            //MessageBox.Show("Backup Core.dll =0, Path = 0");
+            File.Copy(OrgCoreFile, BackupFilePath + "\\Core.dll");
         }
 
         //Counter für die foreach Schleife zum durchsuchen der Arrays
@@ -243,12 +187,12 @@ public class Script
         {
             if (InstalledCoreVersion == s)
             {
-                ModCoreFile = SourceFilePath + MPVersions[Count] + "\\core_" + MPVersions[Count] + "_mod.dll";
+                ModCoreFile = SourceFilePath + MPVersions[Count] + "\\Core_" + MPVersions[Count] + "_mod.dll";
                 OldCoreInstalled = FileDate(OrgCoreFile, ModCoreFile);
                 if (OldCoreInstalled == true)
                 {
                     File.Delete(OrgCoreFile);
-                    File.Copy(ModCoreFile, MpeInstaller.TransformInRealPath("%Base%") + "\\core.dll");
+                    File.Copy(ModCoreFile, MpeInstaller.TransformInRealPath("%Base%") + "\\Core.dll");
                     //MessageBox.Show("Installation successfull");
                     return;
                 }
@@ -258,14 +202,14 @@ public class Script
                     return;
                 }
             }
-            else if (InstalledCoreVersion == getFileVersion(SourceFilePath + MPVersions[Count] + "\\core_" + MPVersions[Count] + "_mod.dll"))
+            else if (InstalledCoreVersion == getFileVersion(SourceFilePath + MPVersions[Count] + "\\Core_" + MPVersions[Count] + "_mod.dll"))
             {
-                ModCoreFile = SourceFilePath + "\\" + MPVersions[Count] + "\\core_" + MPVersions[Count] + "_mod.dll";
+                ModCoreFile = SourceFilePath + "\\" + MPVersions[Count] + "\\Core_" + MPVersions[Count] + "_mod.dll";
                 OldCoreInstalled = FileDate(OrgCoreFile, ModCoreFile);
                 if (OldCoreInstalled == true)
                 {
                     File.Delete(OrgCoreFile);
-                    File.Copy(ModCoreFile, MpeInstaller.TransformInRealPath("%Base%") + "\\core.dll");
+                    File.Copy(ModCoreFile, MpeInstaller.TransformInRealPath("%Base%") + "\\Core.dll");
                     //MessageBox.Show("Installation successfull!");
                     return;
                 }
@@ -479,18 +423,18 @@ using System.Diagnostics;
         <Id />
         <MinVersion>
           <Major>1</Major>
-          <Minor>2</Minor>
-          <Build>1</Build>
+          <Minor>3</Minor>
+          <Build>100</Build>
           <Revision>1</Revision>
         </MinVersion>
         <MaxVersion>
           <Major>1</Major>
-          <Minor>3</Minor>
+          <Minor>4</Minor>
           <Build>100</Build>
           <Revision>0</Revision>
         </MaxVersion>
-        <WarnOnly>true</WarnOnly>
-        <Message>requires Installer version 1.3.100.0 to 1.3.100.0.</Message>
+        <WarnOnly>false</WarnOnly>
+        <Message>requires Installer version 1.3.100.0 to 1.4.100.0.</Message>
         <Name>Installer</Name>
       </DependencyItem>
     </Items>
@@ -507,22 +451,22 @@ using System.Diagnostics;
     <UpdateUrl>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=266&amp;cf_id=52</UpdateUrl>
     <Version>
       <Major>1</Major>
-      <Minor>0</Minor>
-      <Build>0</Build>
-      <Revision>3</Revision>
+      <Minor>4</Minor>
+      <Build>100</Build>
+      <Revision>0</Revision>
     </Version>
     <ExtensionDescription>For easier update support for new core.dll files!
 
 Replaces the installed core.dll with an modified one to enable support for the AtmoLight Plugin!</ExtensionDescription>
-    <VersionDescription>1.0.0.3
+    <VersionDescription>1.4.100.0
 
-- Added core.dll for MediaPortal 1.4 pre relase
-- Bug Fixes</VersionDescription>
+- Added core.dll for MediaPortal 1.5 pre relase
+- revision number follow MP release</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=266&amp;cf_id=24</OnlineLocation>
-    <ReleaseDate>2013-02-10T01:00:24.1271174+01:00</ReleaseDate>
+    <ReleaseDate>2013-08-20T01:00:24</ReleaseDate>
     <Tags>atmolight, ambilight, sedu-board, teensy2, atmoduino, led</Tags>
-    <Location>MPCoreChanger_1.0.0.3.mpe1</Location>
+    <Location>MPCoreChanger_1.4.100.0.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -560,76 +504,6 @@ Replaces the installed core.dll with an modified one to enable support for the A
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.3.0_rc\Core.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{43742a99-c672-4f39-8731-e1b08e7744fa}-Core.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_rc\Core.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.3.0_rc\core_1.3.0_rc_mod.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{8b0f49a2-be73-43ba-84c3-0691ea0e7a0c}-core_1.3.0_rc_mod.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_rc\core_1.3.0_rc_mod.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.3.0_beta\Core.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{2960cf2b-01c8-44a4-a203-6b9ee6919c18}-Core.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_beta\Core.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.3.0_beta\core_1.3.0_beta_mod.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{3d2b13cc-accb-4b29-a343-406f99063889}-core_1.3.0_beta_mod.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_beta\core_1.3.0_beta_mod.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.3.0_alpha\Core.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{b82350cb-beb8-44e6-87bf-51945895e27e}-Core.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_alpha\Core.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.3.0_alpha\Core_1.3.0_alpha_mod.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{2970e30c-7399-4f36-a73f-fe7b3a54e347}-Core_1.3.0_alpha_mod.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_alpha\Core_1.3.0_alpha_mod.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.2.3\Core.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{72210a8b-4e50-41e3-8150-824529b9edac}-Core.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.2.3\Core.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.2.3\Core_1.2.3_mod.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{9c16f5a7-6f4e-4f0e-9123-1eee1d6141c8}-Core_1.2.3_mod.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.2.3\Core_1.2.3_mod.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.3.0_final\Core.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{d3e02e9d-20e8-40cf-962b-a9b0797b58f7}-Core.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_final\Core.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.3.0_final\Core_1.3.0_final_mod.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{2582a2d3-e27b-4605-b54a-0588d761009d}-Core_1.3.0_final_mod.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.3.0_final\Core_1.3.0_final_mod.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>..\..\MediaPortal\Core\1.4_pre\Core.dll</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{fef9dad5-537b-4783-b3b4-d627707c409e}-Core.dll</ZipFileName>
         <DestinationFilename>%Base%\plugins\MPCoreChanger\1.4_pre\Core.dll</DestinationFilename>
@@ -641,11 +515,25 @@ Replaces the installed core.dll with an modified one to enable support for the A
         <ZipFileName>Installer{CopyFile}\{3989a4ea-dbb1-4f63-b571-937021838006}-Core_1.4_pre_mod.dll</ZipFileName>
         <DestinationFilename>%Base%\plugins\MPCoreChanger\1.4_pre\Core_1.4_pre_mod.dll</DestinationFilename>
       </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7c8ce420-f7ba-4fbd-9175-e7aef8d209ad}-Core.dll</ZipFileName>
+        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core_1.5_pre_mod.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{20bbe1b1-9cd0-4017-a874-5ec90687eb43}-Core_1.5_pre_mod.dll</ZipFileName>
+        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core_1.5_pre_mod.dll</DestinationFilename>
+      </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\MPCoreChanger.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{081c5fde-aa3d-4064-ae56-1819213f90d7}-MPCoreChanger.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{41f1efee-1ded-4039-9190-dc8d24967e9c}-MPCoreChanger.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

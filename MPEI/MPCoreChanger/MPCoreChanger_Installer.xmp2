@@ -453,7 +453,7 @@ using System.Diagnostics;
       <Major>1</Major>
       <Minor>4</Minor>
       <Build>100</Build>
-      <Revision>0</Revision>
+      <Revision>1</Revision>
     </Version>
     <ExtensionDescription>For easier update support for new core.dll files!
 
@@ -466,7 +466,7 @@ Replaces the installed core.dll with an modified one to enable support for the A
     <OnlineLocation>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=266&amp;cf_id=24</OnlineLocation>
     <ReleaseDate>2013-08-20T01:00:24</ReleaseDate>
     <Tags>atmolight, ambilight, sedu-board, teensy2, atmoduino, led</Tags>
-    <Location>MPCoreChanger_1.4.100.0.mpe1</Location>
+    <Location>./Released/MPCoreChanger_1.4.100.1.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -533,7 +533,7 @@ Replaces the installed core.dll with an modified one to enable support for the A
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\MPCoreChanger.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{41f1efee-1ded-4039-9190-dc8d24967e9c}-MPCoreChanger.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{f015af68-a500-4004-ae0b-cd2506ef16de}-MPCoreChanger.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

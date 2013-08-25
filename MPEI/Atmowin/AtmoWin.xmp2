@@ -816,36 +816,45 @@ public class Script
     <Items />
   </PluginDependencies>
   <GeneralInfo>
-    <Name>AtmoWin - Ambilight Software</Name>
+    <Name>AtmoWin</Name>
     <Id>e0802934-4e24-4b0c-bf8c-a6f35af1093a</Id>
-    <Author>gemx /plugin) / Angie05 (plugin,Atmowin), RickDB (Atmoduino), legnod (installer), azzuro(Teensy)</Author>
+    <Author>Angie05 , RickDB , legnod (installer), azzuro(Teensy), André Weber, Matthiaz, MacGyver2k, swifty</Author>
     <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
     <ForumPage />
-    <UpdateUrl>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=262&amp;cf_id=52</UpdateUrl>
+    <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmowin/Atmolight_update.xml</UpdateUrl>
     <Version>
-      <Major>0</Major>
+      <Major>1</Major>
       <Minor>0</Minor>
       <Build>0</Build>
-      <Revision>2</Revision>
+      <Revision>0</Revision>
     </Version>
-    <ExtensionDescription>Plugin for using AtmoWin Ambilight Software with MediaPortal. No need to switch AERO off anymore! 
+    <ExtensionDescription>AtmoWin Software for Ambilight systeml. No need to switch AERO off anymore! 
 
-AtmoLight needs an additional plugin (MPCoreChanger) which will be installed/updated automatically while installing!!! </ExtensionDescription>
-    <VersionDescription />
+
+
+
+
+AtmoWin needs an additional plugin (MPCoreChanger &amp; Atmolight) which will be installed/updated automatically while installing!!! </ExtensionDescription>
+    <VersionDescription>
+Fix of OK/Cancel button dialog for Atmoduino hardware
+
+Color picker / greyscale adjustment fixes merged from SEDU mod (angie05).
+
+Bugfix for registry saving the Atmoduino channels.</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=262&amp;cf_id=24</OnlineLocation>
-    <ReleaseDate>2013-08-23T10:45:58</ReleaseDate>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.0.mpei</OnlineLocation>
+    <ReleaseDate>2013-08-25T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
-    <Location>AtmoWin_Test 2.mpe1</Location>
+    <Location>../../MPEI Release/Atmowin/[Name]_[Version].mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
-          <Value>image\AtmoWin-mpei-.png</Value>
+          <Value>image\AtmoWin-mpei.png</Value>
           <ValueType>File</ValueType>
           <Description>The icon file of the package (jpg,png,bmp)</Description>
         </SectionParam>
         <SectionParam Name="Online Icon">
-          <Value>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmolight%20process%20plugin/image/atmolight.png</Value>
+          <Value>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmowin/image/AtmoWin-mpei.png</Value>
           <ValueType>String</ValueType>
           <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
         </SectionParam>
@@ -862,7 +871,7 @@ AtmoLight needs an additional plugin (MPCoreChanger) which will be installed/upd
           <Description>Online stored screenshot urls separated by ; </Description>
         </SectionParam>
         <SectionParam Name="Force to uninstall on update">
-          <Value>YES</Value>
+          <Value>NO</Value>
           <ValueType>Bool</ValueType>
           <Description>Show dialog and force to uninstall previous version when updating an extension. Should only be disabled if you are using an NSIS/MSI installer.</Description>
         </SectionParam>
@@ -1294,8 +1303,8 @@ AtmoLight needs an additional plugin (MPCoreChanger) which will be installed/upd
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>image\AtmoWin-mpei-.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{6a5f2e27-f634-4a00-a422-5b78a03af112}-AtmoWin-mpei-.png</ZipFileName>
+        <LocalFileName>image\AtmoWin-mpei.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{3aa98115-4e3f-4849-8718-b59e5f93438d}-AtmoWin-mpei.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>
@@ -1314,7 +1323,7 @@ AtmoLight needs an additional plugin (MPCoreChanger) which will be installed/upd
       </FolderGroup>
     </FolderGroups>
     <ProjectFilename>AtmoWin.xmp2</ProjectFilename>
-    <UpdatePath1>update.xml</UpdatePath1>
+    <UpdatePath1>Atmowin_update.xml</UpdatePath1>
     <UpdatePath2 />
     <UpdatePath3 />
   </ProjectSettings>

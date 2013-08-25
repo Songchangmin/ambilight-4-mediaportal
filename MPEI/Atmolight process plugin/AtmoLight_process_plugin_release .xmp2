@@ -38,7 +38,7 @@
         <ParentGroup>Plugin Files</ParentGroup>
         <DisplayName>Extensions Plugin</DisplayName>
         <DefaulChecked>false</DefaulChecked>
-        <Description>The Extensions Plugin allows configuration and update of OnlineVideos (and other Plugins) from within MediaPortal.</Description>
+        <Description>The Extensions Plugin allows configuration and update (and other Plugins) from within MediaPortal.</Description>
         <Files>
           <Items>
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
@@ -169,7 +169,7 @@ public class Script
               <Params>
                 <Items>
                   <SectionParam Name="Extension package">
-                    <Value>..\Atmowin\AtmoWin_TEST.mpe1</Value>
+                    <Value />
                     <ValueType>File</ValueType>
                     <Description>Location of the extension package</Description>
                   </SectionParam>
@@ -251,7 +251,8 @@ MessageBox.Show("No AtmoWin installation found! Please install AtmoWin and selec
 }
     return;
   }
-}</Value>
+}
+</Value>
                     <ValueType>Script</ValueType>
                     <Description />
                   </SectionParam>
@@ -296,11 +297,6 @@ public static void Main(PackageClass packageClass, UnInstallItem item)
            catch { }
         }
 }
-
-
-
-
-
 </Value>
                     <ValueType>Script</ValueType>
                     <Description />
@@ -376,12 +372,12 @@ public static void Main(PackageClass packageClass, UnInstallItem item)
     <Items />
   </PluginDependencies>
   <GeneralInfo>
-    <Name>AtmoLight process plugin</Name>
+    <Name>AtmoLight</Name>
     <Id>8d2c6d9d-03c8-4144-b0b8-85e3a2b0e001</Id>
-    <Author>gemx /plugin) / Angie05 (plugin,Atmowin), RickDB (Atmoduino), legnod (installer), azzuro(Teensy)</Author>
+    <Author>gemx (plugin) / Angie05 (plugin,Atmowin), RickDB (Atmoduino), legnod (installer), azzuro (Teensy)</Author>
     <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
     <ForumPage>http://forum.team-mediaportal.com/threads/new-plugin-atmolight-process-plugin-update-25-05-2010-v1-9.75840/</ForumPage>
-    <UpdateUrl>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=262&amp;cf_id=52</UpdateUrl>
+    <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmolight%20process%20plugin/Atmolight_update.xml</UpdateUrl>
     <Version>
       <Major>1</Major>
       <Minor>0</Minor>
@@ -389,22 +385,30 @@ public static void Main(PackageClass packageClass, UnInstallItem item)
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for using AtmoWin Ambilight Software with MediaPortal. No need to switch AERO off anymore! 
-
+
+
+
 AtmoLight needs an additional plugin (MPCoreChanger &amp; Atmowin) which will be installed/updated automatically while installing!!! </ExtensionDescription>
-    <VersionDescription>- Installer changes: 
-*MPCoreChanger is now a stand alone plugin to provide better update support for new core.dll files - automatic downloaded/installation will be started if needed!
-*A shortcut to the installed AtmoWinA.exe will be created on the desktop!
-*better uninstall handling!
-*new version system
-
-- Plugin:
-*added support for extensions plugin (atmolight configuration inside MP GUI)!
-*the path to AtmoWinA.exe will be entered automatically inside the MediaPortal.xml file!</VersionDescription>
+    <VersionDescription>Version 1.1.19016.0
+
+
+
+	- Installer changes: 
+
+* Atmowin splitted to own installers (for easy update)
+
+		
+
+
+
+	- Plugin updated to 19016 :
+
+*  processus times is slowdown for reduce CPU usage</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=262&amp;cf_id=24</OnlineLocation>
-    <ReleaseDate>2013-01-21T10:45:58.3479813+01:00</ReleaseDate>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmolight/AtmoLight_1.0.19016.0.mpe1</OnlineLocation>
+    <ReleaseDate>2013-08-25T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
-    <Location>AtmoLight_1.0.19016.04.mpe1</Location>
+    <Location>..\..\MPEI Release\Atmolight\[Name]_[Version].mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -470,15 +474,8 @@ AtmoLight needs an additional plugin (MPCoreChanger &amp; Atmowin) which will be
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\Atmowin\AtmoWin_TEST.mpe1</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{35b8d836-7afb-454a-add2-2778bd654f65}-AtmoWin_TEST.mpe1</ZipFileName>
-        <DestinationFilename />
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\atmolight.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{ee6c1f3c-7fac-4867-89c0-a5dcddad1afb}-atmolight.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{812d066d-0480-4ff5-99a0-b227b2d58300}-atmolight.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

@@ -1,4 +1,7 @@
 
+
+25-08-2013 Version : 1.0.0.0
+
 - 09-07-2013
 Fix of OK/Cancel button dialog for Atmoduino hardware
 
@@ -11,3 +14,4 @@ Color picker / greyscale adjustment fixes merged from SEDU mod (angie05).
 - 26-06-2013
 
 Bugfix for registry saving the Atmoduino channels.
+

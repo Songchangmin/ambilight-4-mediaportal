@@ -284,23 +284,23 @@ Replaces the installed core.dll with an modified one to enable support for the A
             <Name>MediaPortal</Name>
           </DependencyItem>
           <DependencyItem>
-            <Type>Installer</Type>
-            <Id />
+            <Type>Extension</Type>
+            <Id>8d2c6d9d-03c8-4144-b0b8-85e3a2b0e001</Id>
             <MinVersion>
-              <Major>1</Major>
-              <Minor>4</Minor>
-              <Build>100</Build>
-              <Revision>0</Revision>
+              <Major>0</Major>
+              <Minor>0</Minor>
+              <Build>0</Build>
+              <Revision>1</Revision>
             </MinVersion>
             <MaxVersion>
-              <Major>1</Major>
-              <Minor>4</Minor>
-              <Build>100</Build>
-              <Revision>1</Revision>
+              <Major>*</Major>
+              <Minor>*</Minor>
+              <Build>*</Build>
+              <Revision>*</Revision>
             </MaxVersion>
             <WarnOnly>false</WarnOnly>
-            <Message>requires Installer version 1.4.100.0 to 1.4.100.0.</Message>
-            <Name>Installer</Name>
+            <Message>requires Extension version 0.0.0.0 to *.*.*.*.</Message>
+            <Name>AtmoLight</Name>
           </DependencyItem>
         </Items>
       </Dependencies>
@@ -313,7 +313,7 @@ Replaces the installed core.dll with an modified one to enable support for the A
         <Author>legnod</Author>
         <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
         <ForumPage />
-        <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git-history/EXP_Store_on_repo/MPEI/MPCoreChanger/MPCoreChanger_update.xml</UpdateUrl>
+        <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git/MPEI/MPCoreChanger/MPCoreChanger_update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>4</Minor>
@@ -322,15 +322,19 @@ Replaces the installed core.dll with an modified one to enable support for the A
         </Version>
         <ExtensionDescription>For easier update support for new core.dll files!
 
+
+
 Replaces the installed core.dll with an modified one to enable support for the AtmoLight Plugin!</ExtensionDescription>
         <VersionDescription>1.4.100.1
 
-- testing</VersionDescription>
+
+
+- new installer</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>http://wwhttps://ambilight-4-mediaportal.googlecode.com/git-history/EXP_Store_on_repo/MPEI/MPCoreChanger/Released/MPCoreChanger_1.4.100.1.mpe1</OnlineLocation>
+        <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/MPCoreChanger_1.4.100.1.mpei</OnlineLocation>
         <ReleaseDate>2013-08-22T01:00:24</ReleaseDate>
         <Tags>atmolight, ambilight, sedu-board, teensy2, atmoduino, led</Tags>
-        <Location>./Released/MPCoreChanger_1.4.100.1.mpe1</Location>
+        <Location>../../MPEI Release/MPCoreChanger/[Name]_[Version].mpe1</Location>
         <Params>
           <Items>
             <SectionParam Name="Online Icon">

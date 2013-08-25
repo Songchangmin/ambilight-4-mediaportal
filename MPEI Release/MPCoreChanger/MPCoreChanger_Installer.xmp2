@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>2.0</Version>
+  <Groups>
+    <Items>
+      <GroupItem Name="core_files">
+        <ParentGroup />
+        <DisplayName>MediaPortal core.dll files</DisplayName>
+        <DefaulChecked>true</DefaulChecked>
+        <Description>core_files</Description>
+        <Files>
+          <Items>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{7c8ce420-f7ba-4fbd-9175-e7aef8d209ad}-Core.dll</ZipFileName>
+              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core_1.5_pre_mod.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{20bbe1b1-9cd0-4017-a874-5ec90687eb43}-Core_1.5_pre_mod.dll</ZipFileName>
+              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core_1.5_pre_mod.dll</DestinationFilename>
+            </FileItem>
+          </Items>
+        </Files>
+      </GroupItem>
+    </Items>
+  </Groups>
+  <Sections>
+    <Items>
+      <SectionItem Guid="919a36b8-8562-4cc0-91c5-d6129826b250" Name="Welcome Screen" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header text">
+              <Value>Welcome to the Extension Installer for [Name]</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Description">
+              <Value>This will install [Name] version [Version] on your computer.
+It is recommended that you close all other applications before continuing.
+Click Next to continue or Cancel to exit Setup.
+
+Please note that your current core.dll file will be copied to \..\MPInstallFolder\backup\!</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Left part image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items />
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Welcome Screen</PanelName>
+        <WizardButtonsEnum>NextCancel</WizardButtonsEnum>
+      </SectionItem>
+      <SectionItem Guid="ac76d1e5-0d47-4074-8593-c85bc69a203a" Name="Install Section" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header Title">
+              <Value>Installing modified core.dll!</Value>
+              <ValueType>String</ValueType>
+              <Description>Header title</Description>
+            </SectionParam>
+            <SectionParam Name="Header description">
+              <Value>Please wait until the setup has been finished.</Value>
+              <ValueType>String</ValueType>
+              <Description>Description of section, shown in under section title</Description>
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items>
+            <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="core_files">
+              <Params>
+                <Items />
+              </Params>
+              <ExecuteLocation>AfterPanelShow</ExecuteLocation>
+            </ActionItem>
+            <ActionItem Name="Script" ActionType="Script" ConditionGroup="core_files">
+              <Params>
+                <Items>
+                  <SectionParam Name="Script">
+                    <Value>//css_reference "MpeCore.dll";
+
+using MpeCore.Classes;
+using MpeCore;
+using System.IO;
+using System;
+using System.Windows.Forms;
+using System.Diagnostics;
+
+public class Script
+{
+    public static void Main(PackageClass packageClass, ActionItem actionItem)
+    {
+        //Variablen für die core files
+        String ModCoreFile;
+
+        String OrgCoreFile;
+        OrgCoreFile = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "Core.dll");
+
+        String BackupFilePath;
+        BackupFilePath = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "backup");
+
+        String InstalledCoreVersion;
+        InstalledCoreVersion = getFileVersion(OrgCoreFile);
+
+        String SourceFilePath;
+        SourceFilePath = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), @"plugins\MPCoreChanger\");
+
+        // Für die Überprüfung, ob die installierte Dateiversion älter ist, als die modifizierte
+        Boolean OldCoreInstalled;
+
+        //Array für die unterstützt MediaPortal Versionen + Zuweisung der versionen
+        String[] MPVersions = new String[1] {"1.5_pre"};
+
+        //Array für die bekannten Versionen der original core.dll Dateien + Zuweisung
+        String[] OrgCoreVersions = new String[1] {"1.4.100.0" };
+
+        //Array für die bekannten Dateiversioen der modifizierten core.dll Dateien (leider nicht immer unterschiedlich zu den orginalen Versionen daher
+        // wird eine zusätzliche Überprüfung nach dem Datum der letzten Änderung der Dateien benötigt
+        String[] ModCoreVersions = new String[1] {"1.4.100.200" };
+
+        //delete old sourcefiles if needed
+        deleteOld();
+
+        //Backup der vorhandenen core.dll und speicherung unter \\Backup\
+        if (File.Exists(Path.Combine(BackupFilePath, "Core.dll")))
+        {
+           //Debug ausgabe
+           //MessageBox.Show("Backup core.dll =1, Path =1");
+            File.Delete(BackupFilePath + "\\Core.dll");
+            File.Copy(OrgCoreFile, BackupFilePath + "\\Core.dll");
+        }
+        else if (Directory.Exists(BackupFilePath))
+        {
+            //Debug ausgabe
+            //MessageBox.Show("Backup Core.dll =0, Path =1");
+            File.Copy(OrgCoreFile, BackupFilePath + "\\Core.dll");
+        }
+        else
+        {
+            Directory.CreateDirectory(BackupFilePath);
+            //Debug ausgabe
+            //MessageBox.Show("Backup Core.dll =0, Path = 0");
+            File.Copy(OrgCoreFile, BackupFilePath + "\\Core.dll");
+        }
+
+        //Counter für die foreach Schleife zum durchsuchen der Arrays
+        int Count = 0;
+
+        // Core Dateien analysieren und entsprechenden Dateipfad zur modifizierten Core.dll zusammensetzen
+        foreach (String s in OrgCoreVersions)
+        {
+            if (InstalledCoreVersion == s)
+            {
+                ModCoreFile = SourceFilePath + MPVersions[Count] + "\\Core_" + MPVersions[Count] + "_mod.dll";
+                OldCoreInstalled = FileDate(OrgCoreFile, ModCoreFile);
+                if (OldCoreInstalled == true)
+                {
+                    File.Delete(OrgCoreFile);
+                    File.Copy(ModCoreFile, MpeInstaller.TransformInRealPath("%Base%") + "\\Core.dll");
+                    //MessageBox.Show("Installation successfull");
+                    return;
+                }
+                else
+                {
+                    //MessageBox.Show("Modified core.dll already installed!");
+                    return;
+                }
+            }
+            else if (InstalledCoreVersion == getFileVersion(SourceFilePath + MPVersions[Count] + "\\Core_" + MPVersions[Count] + "_mod.dll"))
+            {
+                ModCoreFile = SourceFilePath + "\\" + MPVersions[Count] + "\\Core_" + MPVersions[Count] + "_mod.dll";
+                OldCoreInstalled = FileDate(OrgCoreFile, ModCoreFile);
+                if (OldCoreInstalled == true)
+                {
+                    File.Delete(OrgCoreFile);
+                    File.Copy(ModCoreFile, MpeInstaller.TransformInRealPath("%Base%") + "\\Core.dll");
+                    //MessageBox.Show("Installation successfull!");
+                    return;
+                }
+                else
+                {
+                    //MessageBox.Show("Modified core.dll already installed!");
+                    return;
+                }
+
+            }
+            //Debug ausgabe
+            //MessageBox.Show("Step2");
+            Count++;
+        }
+
+    }
+
+    public static String getFileVersion(String FilePath)
+    {
+        // Dateiversion der core.dll abrufen
+        FileVersionInfo myFileVersionInfo = FileVersionInfo.GetVersionInfo(FilePath);
+        // Dateiversion zurückgeben
+        return myFileVersionInfo.FileVersion;
+    }
+
+    public static Boolean FileDate(String OrgFilePath, String ModFilePath)
+    {
+        // Änderungsdatum der Datei abrufen
+        DateTime myFileDate_org = File.GetLastWriteTime(OrgFilePath);
+        DateTime myFileDate_mod = File.GetLastWriteTime(ModFilePath);
+
+        // Ergebnis zurückgeben (Mod Datei neues als Org Datei?)
+        int result = DateTime.Compare(myFileDate_org, myFileDate_mod);
+        if (result &lt; 0)
+        {
+            return true;
+        }
+        else if (result == 0)
+        {
+            return false;
+        }
+        else if (result &gt; 0)
+        {
+            return false;
+        }
+        return false;
+    }
+
+    public static void deleteOld()
+    {
+        String OldSourceFilePath;
+        OldSourceFilePath = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "plugins\\AtmoLight"); 
+
+        String OldSourceFilePath2;
+        OldSourceFilePath2 = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "plugins\\MPCore_changer");         
+try
+        {
+            if (Directory.Exists(OldSourceFilePath)) ;
+            {
+                Directory.Delete(OldSourceFilePath, true);
+            }
+            if (Directory.Exists(OldSourceFilePath2)) ;
+            {
+                Directory.Delete(OldSourceFilePath2, true);
+            }
+        }
+
+        catch{}
+
+        return;
+    }
+
+}</Value>
+                    <ValueType>Script</ValueType>
+                    <Description />
+                  </SectionParam>
+                  <SectionParam Name="Uninstall Script">
+                    <Value>//css_reference "MpeCore.dll";
+
+using MpeCore.Classes;
+using MpeCore;
+using System.IO;
+using System;
+using System.Windows.Forms;
+using System.Diagnostics;
+
+
+    public class Script
+        {
+        public static void Main(PackageClass packageClass, UnInstallItem item)
+        {
+            String OrgCoreFile;
+            OrgCoreFile = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "core.dll");
+
+            String BackupFilePath;
+            BackupFilePath = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "backup");
+
+            String SourceFilePath;
+            SourceFilePath = Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "plugins\\MPCoreChanger");
+
+            try
+            {
+                //Backup der core.dll widerherstellen
+                if (File.Exists(OrgCoreFile))
+                {
+                   //Debug ausgabe
+                    //MessageBox.Show("org core.dll = 1");
+                    if (File.Exists(BackupFilePath + "\\core.dll"))
+                    {
+                       //Debug ausgabe 
+                       //MessageBox.Show("backup core.dll = 1");
+                        File.Delete(OrgCoreFile);
+                        File.Copy(BackupFilePath + "\\core.dll", Path.Combine(MpeInstaller.TransformInRealPath("%Base%"), "core.dll"));
+                        Directory.Delete(BackupFilePath, true);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No core.dll backup found! The existing core.dll will not be replaced");
+                    }
+                }
+            }
+            catch { }
+
+            try
+            {
+                if (Directory.Exists(SourceFilePath))
+                {
+                    Directory.Delete(SourceFilePath, true);
+                }
+            }
+            catch { }
+
+            return;
+        }
+    }
+
+</Value>
+                    <ValueType>Script</ValueType>
+                    <Description />
+                  </SectionParam>
+                </Items>
+              </Params>
+              <ExecuteLocation>AfterPanelShow</ExecuteLocation>
+            </ActionItem>
+          </Items>
+        </Actions>
+        <IncludedGroups>
+          <string>Default</string>
+          <string>core_files</string>
+        </IncludedGroups>
+        <PanelName>Install Section</PanelName>
+        <WizardButtonsEnum>Next</WizardButtonsEnum>
+      </SectionItem>
+      <SectionItem Guid="7ed2cd78-cec3-45ae-8aef-37172537a27b" Name="Setup Complete" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header text">
+              <Value>The Extension Installer Wizard has successfully installed [Name].</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Left part image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Show radio buttons">
+              <Value>NO</Value>
+              <ValueType>Bool</ValueType>
+              <Description>Use radiobutton in place of combobox</Description>
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items />
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Setup Complete</PanelName>
+        <WizardButtonsEnum>Finish</WizardButtonsEnum>
+      </SectionItem>
+    </Items>
+  </Sections>
+  <Dependencies>
+    <Items>
+      <DependencyItem>
+        <Type>MediaPortal</Type>
+        <Id />
+        <MinVersion>
+          <Major>1</Major>
+          <Minor>1</Minor>
+          <Build>6</Build>
+          <Revision>27644</Revision>
+        </MinVersion>
+        <MaxVersion>
+          <Major>1</Major>
+          <Minor>1</Minor>
+          <Build>6</Build>
+          <Revision>27644</Revision>
+        </MaxVersion>
+        <WarnOnly>false</WarnOnly>
+        <Message>This version of MediaPortal core changer requires MediaPortal 1.2.0 Beta or higher!</Message>
+        <Name>MediaPortal</Name>
+      </DependencyItem>
+      <DependencyItem>
+        <Type>Installer</Type>
+        <Id />
+        <MinVersion>
+          <Major>1</Major>
+          <Minor>4</Minor>
+          <Build>100</Build>
+          <Revision>0</Revision>
+        </MinVersion>
+        <MaxVersion>
+          <Major>1</Major>
+          <Minor>4</Minor>
+          <Build>100</Build>
+          <Revision>1</Revision>
+        </MaxVersion>
+        <WarnOnly>false</WarnOnly>
+        <Message>requires Installer version 1.4.100.0 to 1.4.100.0.</Message>
+        <Name>Installer</Name>
+      </DependencyItem>
+    </Items>
+  </Dependencies>
+  <PluginDependencies>
+    <Items />
+  </PluginDependencies>
+  <GeneralInfo>
+    <Name>MPCoreChanger</Name>
+    <Id>15db8e0f-9516-43a9-bffc-80c00d8b21f0</Id>
+    <Author>legnod</Author>
+    <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
+    <ForumPage />
+    <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git-history/EXP_Store_on_repo/MPEI/MPCoreChanger/MPCoreChanger_update.xml</UpdateUrl>
+    <Version>
+      <Major>1</Major>
+      <Minor>4</Minor>
+      <Build>100</Build>
+      <Revision>1</Revision>
+    </Version>
+    <ExtensionDescription>For easier update support for new core.dll files!
+
+Replaces the installed core.dll with an modified one to enable support for the AtmoLight Plugin!</ExtensionDescription>
+    <VersionDescription>1.4.100.1
+
+- testing</VersionDescription>
+    <DevelopmentStatus>Stable</DevelopmentStatus>
+    <OnlineLocation>http://wwhttps://ambilight-4-mediaportal.googlecode.com/git-history/EXP_Store_on_repo/MPEI/MPCoreChanger/Released/MPCoreChanger_1.4.100.1.mpe1</OnlineLocation>
+    <ReleaseDate>2013-08-22T01:00:24</ReleaseDate>
+    <Tags>atmolight, ambilight, sedu-board, teensy2, atmoduino, led</Tags>
+    <Location>./Released/MPCoreChanger_1.4.100.1.mpe1</Location>
+    <Params>
+      <Items>
+        <SectionParam Name="Icon">
+          <Value>image\MPCoreChanger.png</Value>
+          <ValueType>File</ValueType>
+          <Description>The icon file of the package (jpg,png,bmp)</Description>
+        </SectionParam>
+        <SectionParam Name="Online Icon">
+          <Value>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/MPCoreChanger/image/MPCoreChanger.png</Value>
+          <ValueType>String</ValueType>
+          <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
+        </SectionParam>
+        <SectionParam Name="Configuration file">
+          <Value />
+          <ValueType>Template</ValueType>
+          <Description>The file used to configure the extension.
+ If it has .exe extension the will be executed.
+ If it has .dll extension it's started like MP plugin configuration.</Description>
+        </SectionParam>
+        <SectionParam Name="Online Screenshots">
+          <Value />
+          <ValueType>String</ValueType>
+          <Description>Online stored screenshot urls separated by ; </Description>
+        </SectionParam>
+        <SectionParam Name="Force to uninstall on update">
+          <Value>NO</Value>
+          <ValueType>Bool</ValueType>
+          <Description>Show dialog and force to uninstall previous version when updating an extension. Should only be disabled if you are using an NSIS/MSI installer.</Description>
+        </SectionParam>
+      </Items>
+    </Params>
+  </GeneralInfo>
+  <UniqueFileList>
+    <Items>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7c8ce420-f7ba-4fbd-9175-e7aef8d209ad}-Core.dll</ZipFileName>
+        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core_1.5_pre_mod.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{20bbe1b1-9cd0-4017-a874-5ec90687eb43}-Core_1.5_pre_mod.dll</ZipFileName>
+        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core_1.5_pre_mod.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>image\MPCoreChanger.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{3a246a1d-c456-42bc-81de-6451a96852a4}-MPCoreChanger.png</ZipFileName>
+        <DestinationFilename />
+      </FileItem>
+    </Items>
+  </UniqueFileList>
+  <ProjectSettings>
+    <FolderGroups>
+      <FolderGroup InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName />
+        <ZipFileName>Installer{CopyFile}\{1067e2ea-c3bf-49ce-9152-ff4aca0b9936}-</ZipFileName>
+        <DestinationFilename>%Base%\plugins\MPCoreChanger</DestinationFilename>
+        <Folder>..\..\MediaPortal\Core</Folder>
+        <Group>core_files</Group>
+        <Recursive>true</Recursive>
+      </FolderGroup>
+    </FolderGroups>
+    <ProjectFilename>MPCoreChanger_Installer.xmp2</ProjectFilename>
+    <UpdatePath1>MPCoreChanger_update.xml</UpdatePath1>
+    <UpdatePath2 />
+    <UpdatePath3 />
+  </ProjectSettings>
+  <IsSkin>false</IsSkin>
+</PackageClass>

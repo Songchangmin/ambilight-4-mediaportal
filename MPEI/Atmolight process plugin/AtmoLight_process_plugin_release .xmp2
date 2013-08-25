@@ -116,7 +116,7 @@ The AtmoLight process plugin needs the MPCoreChanger plugin to replace the origi
         </Params>
         <Actions>
           <Items>
-            <ActionItem Name="Script: kill amtmowin process" ActionType="Script" ConditionGroup="">
+            <ActionItem Name="Script: kill atmowin process" ActionType="Script" ConditionGroup="">
               <Params>
                 <Items>
                   <SectionParam Name="Script">
@@ -157,7 +157,7 @@ public class Script
                   </SectionParam>
                 </Items>
               </Params>
-              <ExecuteLocation>BeforPanelShow</ExecuteLocation>
+              <ExecuteLocation>AfterPanelShow</ExecuteLocation>
             </ActionItem>
             <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="">
               <Params>
@@ -184,7 +184,7 @@ public class Script
                     <Description>Minimum Version of the extension package - older versions will be updated (only used when downloading via Id).</Description>
                   </SectionParam>
                   <SectionParam Name="Silent Install">
-                    <Value />
+                    <Value>YES</Value>
                     <ValueType>Bool</ValueType>
                     <Description>Silent install, No wizard screen will be displayed </Description>
                   </SectionParam>
@@ -277,11 +277,6 @@ public static void Main(PackageClass packageClass, UnInstallItem item)
 
             try
             {
-          Process[] pp = Process.GetProcessesByName("AtmoWinA");
-          foreach (Process p in pp)
-         {
-             p.Kill();
-         }
 
                 if (File.Exists(Path.Combine(SourceFilePath_plugin, "AtmoDXUtil.dll")))
                 {
@@ -390,19 +385,20 @@ public static void Main(PackageClass packageClass, UnInstallItem item)
     <Version>
       <Major>1</Major>
       <Minor>0</Minor>
-      <Build>19014</Build>
-      <Revision>3</Revision>
+      <Build>19016</Build>
+      <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for using AtmoWin Ambilight Software with MediaPortal. No need to switch AERO off anymore! 
-AtmoLight needs an additional plugin (MPCoreChanger) which will be installed/updated automatically while installing!!! </ExtensionDescription>
-    <VersionDescription>- Installer changes: 
-*MPCoreChanger is now a stand alone plugin to provide better update support for new core.dll files - automatic downloaded/installation will be started if needed!
-*A shortcut to the installed AtmoWinA.exe will be created on the desktop!
-*better uninstall handling!
-*new version system
-
-- Plugin:
-*added support for extensions plugin (atmolight configuration inside MP GUI)!
+
+AtmoLight needs an additional plugin (MPCoreChanger &amp; Atmowin) which will be installed/updated automatically while installing!!! </ExtensionDescription>
+    <VersionDescription>- Installer changes: 
+*MPCoreChanger is now a stand alone plugin to provide better update support for new core.dll files - automatic downloaded/installation will be started if needed!
+*A shortcut to the installed AtmoWinA.exe will be created on the desktop!
+*better uninstall handling!
+*new version system
+
+- Plugin:
+*added support for extensions plugin (atmolight configuration inside MP GUI)!
 *the path to AtmoWinA.exe will be entered automatically inside the MediaPortal.xml file!</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>http://www.team-mediaportal.com/index.php?option=com_mtree&amp;task=att_download&amp;link_id=262&amp;cf_id=24</OnlineLocation>

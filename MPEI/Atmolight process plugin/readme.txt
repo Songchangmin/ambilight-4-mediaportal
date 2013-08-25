@@ -1,3 +1,13 @@
+Version 1.1.19016.0
+
+	- Installer changes: 
+		* Atmowin splitted to own installers (for easy update)
+		
+
+	- Plugin updated to 19016 :
+		*  processus times is slowdown for reduce CPU usage
+
+
 Version 1.1.19014.1
 
 PLEASE Uninstall the AtmoLight plugin version 1.9.0.15 manually with the MPEI!

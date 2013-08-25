@@ -840,7 +840,7 @@ AtmoLight needs an additional plugin (MPCoreChanger) which will be installed/upd
     <Params>
       <Items>
         <SectionParam Name="Icon">
-          <Value>image\atmolight.png</Value>
+          <Value>image\AtmoWin-mpei-.png</Value>
           <ValueType>File</ValueType>
           <Description>The icon file of the package (jpg,png,bmp)</Description>
         </SectionParam>
@@ -1294,8 +1294,8 @@ AtmoLight needs an additional plugin (MPCoreChanger) which will be installed/upd
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>image\atmolight.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{16a6965b-0323-44de-8ae4-3940151c70b7}-atmolight.png</ZipFileName>
+        <LocalFileName>image\AtmoWin-mpei-.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{6a5f2e27-f634-4a00-a422-5b78a03af112}-AtmoWin-mpei-.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

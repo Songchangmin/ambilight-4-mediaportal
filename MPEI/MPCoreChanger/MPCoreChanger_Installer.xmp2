@@ -13,16 +13,16 @@
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{7c8ce420-f7ba-4fbd-9175-e7aef8d209ad}-Core.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core.dll</DestinationFilename>
+              <LocalFileName>..\..\MediaPortal\Core\1.5\Core.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{2d2bc342-5e90-4c3b-b9c7-494c020c374f}-Core.dll</ZipFileName>
+              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5\Core.dll</DestinationFilename>
             </FileItem>
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core_1.5_pre_mod.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{20bbe1b1-9cd0-4017-a874-5ec90687eb43}-Core_1.5_pre_mod.dll</ZipFileName>
-              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core_1.5_pre_mod.dll</DestinationFilename>
+              <LocalFileName>..\..\MediaPortal\Core\1.5\Core_1.5_mod.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c11962c7-70e9-4eef-b0c3-755f3623c824}-Core_1.5_mod.dll</ZipFileName>
+              <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5\Core_1.5_mod.dll</DestinationFilename>
             </FileItem>
           </Items>
         </Files>
@@ -131,14 +131,14 @@ public class Script
         Boolean OldCoreInstalled;
 
         //Array für die unterstützt MediaPortal Versionen + Zuweisung der versionen
-        String[] MPVersions = new String[1] {"1.5_pre"};
+        String[] MPVersions = new String[1] {"1.5"};
 
         //Array für die bekannten Versionen der original core.dll Dateien + Zuweisung
-        String[] OrgCoreVersions = new String[1] {"1.4.100.0" };
+        String[] OrgCoreVersions = new String[1] {"1.5.0.0" };
 
         //Array für die bekannten Dateiversioen der modifizierten core.dll Dateien (leider nicht immer unterschiedlich zu den orginalen Versionen daher
         // wird eine zusätzliche Überprüfung nach dem Datum der letzten Änderung der Dateien benötigt
-        String[] ModCoreVersions = new String[1] {"1.4.100.200" };
+        String[] ModCoreVersions = new String[1] {"1.5.0.200" };
 
         //delete old sourcefiles if needed
         deleteOld();
@@ -431,28 +431,26 @@ using System.Diagnostics;
   <GeneralInfo>
     <Name>MPCoreChanger</Name>
     <Id>15db8e0f-9516-43a9-bffc-80c00d8b21f0</Id>
-    <Author>legnod</Author>
+    <Author>legnod, azzuro,</Author>
     <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
     <ForumPage />
     <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git/MPEI/MPCoreChanger/MPCoreChanger_update.xml</UpdateUrl>
     <Version>
       <Major>1</Major>
-      <Minor>4</Minor>
-      <Build>100</Build>
-      <Revision>1</Revision>
+      <Minor>5</Minor>
+      <Build>0</Build>
+      <Revision>0</Revision>
     </Version>
     <ExtensionDescription>For easier update support for new core.dll files!
 
 
 
 Replaces the installed core.dll with an modified one to enable support for the AtmoLight Plugin!</ExtensionDescription>
-    <VersionDescription>1.4.100.1
-
-
+    <VersionDescription>1.5.0.0
 
 - new installer</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/MPCoreChanger_1.4.100.1.mpei</OnlineLocation>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/MPCoreChanger/MPCoreChanger_1.5.0.0.mpe1</OnlineLocation>
     <ReleaseDate>2013-08-22T01:00:24</ReleaseDate>
     <Tags>atmolight, ambilight, sedu-board, teensy2, atmoduino, led</Tags>
     <Location>../../MPEI Release/MPCoreChanger/[Name]_[Version].mpe1</Location>
@@ -493,22 +491,22 @@ Replaces the installed core.dll with an modified one to enable support for the A
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{7c8ce420-f7ba-4fbd-9175-e7aef8d209ad}-Core.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core.dll</DestinationFilename>
+        <LocalFileName>..\..\MediaPortal\Core\1.5\Core.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{2d2bc342-5e90-4c3b-b9c7-494c020c374f}-Core.dll</ZipFileName>
+        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5\Core.dll</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\MediaPortal\Core\1.5_pre\Core_1.5_pre_mod.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{20bbe1b1-9cd0-4017-a874-5ec90687eb43}-Core_1.5_pre_mod.dll</ZipFileName>
-        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5_pre\Core_1.5_pre_mod.dll</DestinationFilename>
+        <LocalFileName>..\..\MediaPortal\Core\1.5\Core_1.5_mod.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c11962c7-70e9-4eef-b0c3-755f3623c824}-Core_1.5_mod.dll</ZipFileName>
+        <DestinationFilename>%Base%\plugins\MPCoreChanger\1.5\Core_1.5_mod.dll</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\MPCoreChanger.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{31461f16-3288-41f3-ac68-8cf6062e2079}-MPCoreChanger.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{cb9df46a-f384-4a92-9807-75e17d3dd4b7}-MPCoreChanger.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

@@ -1,13 +1,26 @@
-#include "FastSPI_LED2.h"
+// Uncomment this line if you have any interrupts that are changing pins - this causes the library to be a little bit more cautious
+// #define FAST_SPI_INTERRUPTS_WRITE_PINS 1
+
+// Uncomment this line to force always using software, instead of hardware, SPI (why?)
+// #define FORCE_SOFTWARE_SPI 1
+
+// Uncomment this line if you want to talk to DMX controllers
+// #define FASTSPI_USE_DMX_SIMPLE 1
+
+#include "FastLED.h"
 
 //Set the number of leds in the strip.
-#define NUM_LEDS 150
+#define NUM_LEDS 50
+
+
+// Data pin that led data will be written out over
+#define DATA_PIN 2
+
+// Clock pin only needed for SPI based chipsets when not using hardware SPI
+//#define CLOCK_PIN 8
 
 // Sometimes chipsets wire in a backwards sort of way
-//struct CRGB { unsigned char b;   unsigned char r;   unsigned char g; };
-//struct CRGB { unsigned char r; unsigned char g; unsigned char b; };
-//struct CRGB { unsigned char r;   unsigned char b;   unsigned char g; };
-struct CRGB leds[NUM_LEDS];
+struct CRGB leds[NUM_LEDS]; 
 
 // If no serial data is received for a while, the LEDs are shut off
 // automatically.  This avoids the annoying "stuck pixel" look when
@@ -16,63 +29,94 @@ struct CRGB leds[NUM_LEDS];
 
 void setup() 
 {
-  //Serial.begin(9600);	
-  
-  // sanity check delay - allows reprogramming if accidently blowing power w/leds
-   	delay(2000);
+  Serial.begin(115200);	
+  	// sanity check delay - allows reprogramming if accidently blowing power w/leds
+   	//delay(2000);
 
    	// For safety (to prevent too high of a power draw), the test case defaults to
    	// setting brightness to 25% brightness
-   	//LEDS.setBrightness(64);
+       //LEDS.setBrightness(64);
 
-   	// LEDS.addLeds<WS2811, 13>(leds, NUM_LEDS);
-   	// LEDS.addLeds<TM1809, 13>(leds, NUM_LEDS);
-   	// LEDS.addLeds<UCS1903, 13>(leds, NUM_LEDS);
-   	// LEDS.addLeds<TM1803, 13>(leds, NUM_LEDS);
+      // Uncomment one of the following lines for your leds arrangement.
+      // FastLED.addLeds<TM1803, DATA_PIN, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<TM1804, DATA_PIN, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<TM1809, DATA_PIN, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<WS2811, DATA_PIN, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<WS2812, DATA_PIN, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<WS2812B, DATA_PIN, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<NEOPIXEL, DATA_PIN, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<WS2811_400, DATA_PIN, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<UCS1903, DATA_PIN, RGB>(leds, NUM_LEDS);
+      //FastLED.addLeds<UCS1903B, DATA_PIN, RGB>(leds, NUM_LEDS);
 
-   	//LEDS.addLeds<LPD8806>(leds, NUM_LEDS)->clearLeds(300);
-	 LEDS.addLeds<WS2801>(leds, NUM_LEDS);
-   	// LEDS.addLeds<SM16716>(leds, NUM_LEDS);
+      FastLED.addLeds<WS2801, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<SM16716, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<LPD8806, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<P9813, RGB>(leds, NUM_LEDS);
+      
+      // FastLED.addLeds<WS2801, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<SM16716, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
+      // FastLED.addLeds<LPD8806, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
+      
+      // Put ws2801 strip on the hardware SPI pins with a BGR ordering of rgb and limited to a 1Mhz data rate
+      // LEDS.addLeds<WS2801, DATA_PIN, CLOCK_PIN, BGR, DATA_RATE_MHZ(1)>(leds, NUM_LEDS);
 
-   	// LEDS.addLeds<WS2811, 11>(leds, NUM_LEDS);
+      // LEDS.addLeds<LPD8806, DATA_PIN, CLOCK_PIN>(leds, NUM_LEDS);
+      // LEDS.addLeds<WS2811, DATA_PIN, BRG>(leds, NUM_LEDS);
+      // LEDS.addLeds<LPD8806, BGR>(leds, NUM_LEDS);
 
-	// Put ws2801 strip on the hardware SPI pins with a BGR ordering of rgb and limited to a 1Mhz data rate
-	// LEDS.addLeds<WS2801, 11, 13, BGR, DATA_RATE_MHZ(1)>(leds, NUM_LEDS);
-
-   	// LEDS.addLeds<LPD8806, 10, 11>(leds, NUM_LEDS);
-   	// LEDS.addLeds<WS2811, 13, BRG>(leds, NUM_LEDS);
-   	// LEDS.addLeds<LPD8806, BGR>(leds, NUM_LEDS);
-    
-  //Change datarate to match your led strip as well
-  //FastSPI_LED.setDataRate(2); // Data Rate set to (2) for Adafruit ID 322 12mm bullet because is 5V led strip
-
-  //If non-default SPI pins have been used change this.
-  //FastSPI_LED.setPin(PIN,2,1); // (datapin, datapin, clockpin)
+WhiteLeds();
+//delay(1); // One millisecond pause = latch
+//FadeinFadeOut();
+//delay(1); // One millisecond pause = latch
+//clearLeds();
 
 }
- // TESTING LED when board start only
+
+
+/*------------------  TESTING LED when board start only  -------------------- */
+
+
+void WhiteLeds()
+{   // Move a single white led 
+   for(int whiteLed = 0; whiteLed < NUM_LEDS; whiteLed = whiteLed + 1) {
+      // Turn our current led on to white, then show the leds
+      leds[whiteLed] = CRGB::White;
+
+      // Show the leds (only one of which is set to white, from above)
+      FastLED.show();
+
+      // Wait a little bit
+      delay(8);
+
+      // Turn our current led back to black for the next loop around
+      leds[whiteLed] = CRGB::Black;
+   }
+ }
+
  // Fade in/fade out
- void testleds() {
+void FadeinFadeOut()
+ {
   for(int i = 0; i < 3; i++)  
-  { 
+  {
         for(int i = 0; i < NUM_LEDS; i++) 
-   { 
+   {
     memset(leds, 0, NUM_LEDS * sizeof(struct CRGB));    
     for(int k = 0; k < 256; k++) 
     {
-       {
+      {
         switch(i) 
-        { 
+        {
           case 0: leds[i].r = k; break;
           case 1: leds[i].g = k; break;
           case 2: leds[i].b = k; break;
         }
       }
-      LEDS.show();
+      FastLED.show();
       delay(1);
     }
     for(int k = 255; k >= 0; k--) 
-    { 
+    {
       for(int i = 0; i < NUM_LEDS; i++ ) 
       {
         switch(i) 
@@ -82,36 +126,32 @@ void setup()
           case 2: leds[i].b = k; break;
         }
       }
-      LEDS.show();
-      delay(1);
+      FastLED.show();
+      //delay(1);
     }
    }
   }
+ }
 
-testleds();
-clearLeds();
-delay(1); // One millisecond pause = latch
-  
-}
 int readByte()
-{
-  while(Serial.available()==0)
+    {
+  while(Serial.available()==0) 
   {
-    clearLeds();
+       // clearLeds();
   }
-  LEDS.show();
+  FastLED.show();
   return Serial.read();
-}
+    }
 
 void clearLeds()
 {
   for(int tmpChannel=0; tmpChannel<NUM_LEDS; tmpChannel++)
   {
     leds[tmpChannel].r = 0;
-    leds[tmpChannel].b = 0;
-    leds[tmpChannel].g = 0;  
-  };
-  LEDS.show();
+    leds[tmpChannel].g = 0;
+    leds[tmpChannel].b = 0;  
+  }
+  FastLED.show();
 }
 
 void loop()
@@ -126,17 +166,12 @@ void loop()
         for(int channel=0; channel<channels; channel++)
         {
           leds[channel].r = readByte(); 
-          leds[channel].b = readByte(); // try with .g
-          leds[channel].g = readByte(); // try with .b
+          leds[channel].g = readByte(); // was b old
+          leds[channel].b = readByte(); // was g old
         }
-        LEDS.show();
+        FastLED.show();
       }
     }
-  }
-  else
-  {
-    clearLeds(); 
-    //FastSPI_LED.stop(); // descativer a l'origine
   }
 }
 

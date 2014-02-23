@@ -429,6 +429,13 @@
               <ZipFileName>Installer{CopyFile}\{3ded55c9-1880-4e41-b67d-9955019b7f80}-zone_7.cdr</ZipFileName>
               <DestinationFilename>%Config%\Atmowin\zonen_masken\8-channels\zone_7.cdr</DestinationFilename>
             </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\3Dlut.3dl</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a9fe5120-9bdc-4af0-a07c-71dcaff5e6bd}-3Dlut.3dl</ZipFileName>
+              <DestinationFilename>%Config%\Atmowin\3Dlut.3dl</DestinationFilename>
+            </FileItem>
           </Items>
         </Files>
       </GroupItem>
@@ -826,7 +833,7 @@ public class Script
       <Major>1</Major>
       <Minor>0</Minor>
       <Build>0</Build>
-      <Revision>0</Revision>
+      <Revision>1</Revision>
     </Version>
     <ExtensionDescription>AtmoWin Software for Ambilight systeml. No need to switch AERO off anymore! 
 
@@ -835,14 +842,9 @@ public class Script
 
 
 AtmoWin needs an additional plugin (MPCoreChanger &amp; Atmolight) which will be installed/updated automatically while installing!!! </ExtensionDescription>
-    <VersionDescription>
-Fix of OK/Cancel button dialog for Atmoduino hardware
-
-Color picker / greyscale adjustment fixes merged from SEDU mod (angie05).
-
-Bugfix for registry saving the Atmoduino channels.</VersionDescription>
+    <VersionDescription>Based on Angie05 : Alpha 09</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.0.mpei</OnlineLocation>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.1.mpei</OnlineLocation>
     <ReleaseDate>2013-08-25T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
     <Location>../../MPEI Release/Atmowin/[Name]_[Version].mpe1</Location>
@@ -1300,11 +1302,18 @@ Bugfix for registry saving the Atmoduino channels.</VersionDescription>
         <ZipFileName>Installer{CopyFile}\{3ded55c9-1880-4e41-b67d-9955019b7f80}-zone_7.cdr</ZipFileName>
         <DestinationFilename>%Config%\Atmowin\zonen_masken\8-channels\zone_7.cdr</DestinationFilename>
       </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\3Dlut.3dl</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a9fe5120-9bdc-4af0-a07c-71dcaff5e6bd}-3Dlut.3dl</ZipFileName>
+        <DestinationFilename>%Config%\Atmowin\3Dlut.3dl</DestinationFilename>
+      </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\AtmoWin-mpei.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{3aa98115-4e3f-4849-8718-b59e5f93438d}-AtmoWin-mpei.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{222d407c-53d7-4fd3-acd0-89309e3d9271}-AtmoWin-mpei.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

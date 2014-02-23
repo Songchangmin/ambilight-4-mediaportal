@@ -1,3 +1,11 @@
+Version 1.0.0.1
+Based on Angie05 rework : alpha 09
+
+Version 1.0.0.0
+
+splitted to each mpei
+
+
 Version 1.1.19014.1
 
 PLEASE Uninstall the AtmoLight plugin version 1.9.0.15 manually with the MPEI!

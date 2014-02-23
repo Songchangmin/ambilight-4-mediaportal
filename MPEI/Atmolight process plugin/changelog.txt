@@ -1,3 +1,6 @@
+Version 1.1.19017.1
+Based on Angie05 rework alpha09
+
 Version 1.1.19016.0
 
 	- Installer changes: 

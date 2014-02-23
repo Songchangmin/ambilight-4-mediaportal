@@ -381,32 +381,22 @@ public static void Main(PackageClass packageClass, UnInstallItem item)
     <Version>
       <Major>1</Major>
       <Minor>0</Minor>
-      <Build>19016</Build>
-      <Revision>0</Revision>
+      <Build>19017</Build>
+      <Revision>1</Revision>
     </Version>
     <ExtensionDescription>Plugin for using AtmoWin Ambilight Software with MediaPortal. No need to switch AERO off anymore! 
 
 
 
 AtmoLight needs an additional plugin (MPCoreChanger &amp; Atmowin) which will be installed/updated automatically while installing!!! </ExtensionDescription>
-    <VersionDescription>Version 1.1.19016.0
+    <VersionDescription>Version 1.1.19017.1
 
+angie05 rework alpha fix 09
 
-
-	- Installer changes: 
-
-* Atmowin splitted to own installers (for easy update)
-
-		
-
-
-
-	- Plugin updated to 19016 :
-
-*  processus times is slowdown for reduce CPU usage</VersionDescription>
+thanks to him. </VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmolight/AtmoLight_1.0.19016.0.mpe1</OnlineLocation>
-    <ReleaseDate>2013-08-25T10:45:58</ReleaseDate>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmolight/AtmoLight_1.0.19017.1.mpe1</OnlineLocation>
+    <ReleaseDate>2014-02-23T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
     <Location>..\..\MPEI Release\Atmolight\[Name]_[Version].mpe1</Location>
     <Params>
@@ -475,7 +465,7 @@ AtmoLight needs an additional plugin (MPCoreChanger &amp; Atmowin) which will be
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\atmolight.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{812d066d-0480-4ff5-99a0-b227b2d58300}-atmolight.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{429a329c-7cc8-452a-b7ae-47efaaf4fc00}-atmolight.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

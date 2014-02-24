@@ -1313,7 +1313,7 @@ AtmoWin needs an additional plugin (MPCoreChanger &amp; Atmolight) which will be
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\AtmoWin-mpei.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{579f880b-c2bb-4897-897c-98b2d1936e40}-AtmoWin-mpei.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{99b43ea2-5a3c-41c9-9d59-289a709a8f59}-AtmoWin-mpei.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

@@ -50,7 +50,7 @@
         <Author>Angie05 , RickDB , legnod (installer), azzuro(Teensy), André Weber, Matthiaz, MacGyver2k, swifty</Author>
         <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
         <ForumPage />
-        <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmowin/Atmolight_update.xml</UpdateUrl>
+        <UpdateUrl>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmowin/Atmowin_update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>0</Minor>
@@ -71,7 +71,7 @@ Color picker / greyscale adjustment fixes merged from SEDU mod (angie05).
 
 Bugfix for registry saving the Atmoduino channels.</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.0.mpei</OnlineLocation>
+        <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.0.mpe1</OnlineLocation>
         <ReleaseDate>2013-08-25T10:45:58</ReleaseDate>
         <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
         <Location>../../MPEI Release/Atmowin/[Name]_[Version].mpe1</Location>
@@ -175,7 +175,7 @@ Bugfix for registry saving the Atmoduino channels.</VersionDescription>
 AtmoWin needs an additional plugin (MPCoreChanger &amp; Atmolight) which will be installed/updated automatically while installing!!! </ExtensionDescription>
         <VersionDescription>Based on Angie05 : Alpha 09</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.1.mpei</OnlineLocation>
+        <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.1.mpe1</OnlineLocation>
         <ReleaseDate>2013-08-25T10:45:58</ReleaseDate>
         <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
         <Location>../../MPEI Release/Atmowin/[Name]_[Version].mpe1</Location>

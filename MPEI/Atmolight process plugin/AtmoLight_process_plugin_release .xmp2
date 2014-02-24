@@ -444,7 +444,7 @@ BassFan add :
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\atmolight.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{6990f30d-0eab-4a4d-948b-520d27e09611}-atmolight.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{4d857bc7-03c0-47e2-a9a1-d5c5186341ea}-atmolight.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

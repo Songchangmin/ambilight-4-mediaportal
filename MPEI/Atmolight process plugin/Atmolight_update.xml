@@ -58,7 +58,7 @@
         <Author>gemx (plugin) / Angie05 (plugin,Atmowin), RickDB (Atmoduino), legnod (installer), azzuro (Teensy)</Author>
         <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/threads/new-plugin-atmolight-process-plugin-update-25-05-2010-v1-9.75840/</ForumPage>
-        <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmolight%20process%20plugin/Atmolight_update.xml</UpdateUrl>
+        <UpdateUrl>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmolight%20process%20plugin/Atmolight_update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>0</Minor>
@@ -182,7 +182,7 @@ AtmoLight needs an additional plugin (MPCoreChanger &amp; Atmowin) which will be
         <Author>gemx (plugin) / Angie05 (plugin,Atmowin), RickDB (Atmoduino), legnod (installer), azzuro (Teensy)</Author>
         <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
         <ForumPage>http://forum.team-mediaportal.com/threads/new-plugin-atmolight-process-plugin-update-25-05-2010-v1-9.75840/</ForumPage>
-        <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmolight%20process%20plugin/Atmolight_update.xml</UpdateUrl>
+        <UpdateUrl>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmolight%20process%20plugin/Atmolight_update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>0</Minor>

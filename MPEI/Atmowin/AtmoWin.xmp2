@@ -828,7 +828,7 @@ public class Script
     <Author>Angie05 , RickDB , legnod (installer), azzuro(Teensy), André Weber, Matthiaz, MacGyver2k, swifty</Author>
     <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
     <ForumPage />
-    <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmowin/Atmolight_update.xml</UpdateUrl>
+    <UpdateUrl>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmowin/Atmowin_update.xml</UpdateUrl>
     <Version>
       <Major>1</Major>
       <Minor>0</Minor>
@@ -1313,7 +1313,7 @@ AtmoWin needs an additional plugin (MPCoreChanger &amp; Atmolight) which will be
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\AtmoWin-mpei.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{222d407c-53d7-4fd3-acd0-89309e3d9271}-AtmoWin-mpei.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{323aeb75-2b90-463b-93a3-e5ddb7a706f3}-AtmoWin-mpei.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

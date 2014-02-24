@@ -159,7 +159,7 @@ Bugfix for registry saving the Atmoduino channels.</VersionDescription>
         <Author>Angie05 , RickDB , legnod (installer), azzuro(Teensy), André Weber, Matthiaz, MacGyver2k, swifty</Author>
         <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
         <ForumPage />
-        <UpdateUrl>https://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmowin/Atmolight_update.xml</UpdateUrl>
+        <UpdateUrl>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmowin/Atmowin_update.xml</UpdateUrl>
         <Version>
           <Major>1</Major>
           <Minor>0</Minor>

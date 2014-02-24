@@ -1,3 +1,13 @@
+Version 1.1.19019.0 
+1.Change DropDown to DropDownList so do not can rename any from the List.
+2.Checking for Disable/Enable state from Configuration.exe
+3.Add Start and Exit Option to Config Dialog.
+4.Add Versions-Info to Config Dialog
+5.fixed Windowsize of Config Dialog
+6.Moved to lates version from angie05 to
+7.Use latest AtmoWinA from angie05 to
+8.Add check for use the right Filename do for OpenFileDialog
+
 Version 1.1.19017.1
 
 

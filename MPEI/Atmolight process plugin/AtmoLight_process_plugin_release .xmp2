@@ -192,33 +192,6 @@ public class Script
               </Params>
               <ExecuteLocation>AfterPanelShow</ExecuteLocation>
             </ActionItem>
-            <ActionItem Name="Extension Installer : MPCoreChanger" ActionType="Extension Installer" ConditionGroup="">
-              <Params>
-                <Items>
-                  <SectionParam Name="Extension package">
-                    <Value />
-                    <ValueType>File</ValueType>
-                    <Description>Location of the extension package</Description>
-                  </SectionParam>
-                  <SectionParam Name="Extension Id">
-                    <Value>15db8e0f-9516-43a9-bffc-80c00d8b21f0</Value>
-                    <ValueType>String</ValueType>
-                    <Description>Global Id of the extension package - it will be downloaded when no file is set.</Description>
-                  </SectionParam>
-                  <SectionParam Name="Extension Version">
-                    <Value>1.0.0.1</Value>
-                    <ValueType>String</ValueType>
-                    <Description>Minimum Version of the extension package - older versions will be updated (only used when downloading via Id).</Description>
-                  </SectionParam>
-                  <SectionParam Name="Silent Install">
-                    <Value>YES</Value>
-                    <ValueType>Bool</ValueType>
-                    <Description>Silent install, No wizard screen will be displayed </Description>
-                  </SectionParam>
-                </Items>
-              </Params>
-              <ExecuteLocation>AfterPanelShow</ExecuteLocation>
-            </ActionItem>
             <ActionItem Name="Script : configure Atmolight to Atmowin path" ActionType="Script" ConditionGroup="">
               <Params>
                 <Items>
@@ -381,22 +354,28 @@ public static void Main(PackageClass packageClass, UnInstallItem item)
     <Version>
       <Major>1</Major>
       <Minor>0</Minor>
-      <Build>19017</Build>
-      <Revision>1</Revision>
+      <Build>19019</Build>
+      <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin for using AtmoWin Ambilight Software with MediaPortal. No need to switch AERO off anymore! 
 
 
 
 AtmoLight needs an additional plugin (MPCoreChanger &amp; Atmowin) which will be installed/updated automatically while installing!!! </ExtensionDescription>
-    <VersionDescription>Version 1.1.19017.1
+    <VersionDescription>Version 1.1.19019.0
 
-angie05 rework alpha fix 09
-
-thanks to him. </VersionDescription>
+BassFan add :
+1.Change DropDown to DropDownList so do not can rename any from the List.
+2.Checking for Disable/Enable state from Configuration.exe
+3.Add Start and Exit Option to Config Dialog.
+4.Add Versions-Info to Config Dialog
+5.fixed Windowsize of Config Dialog
+6.Moved to lates version from angie05 to
+7.Use latest AtmoWinA from angie05 to
+8.Add check for use the right Filename do for OpenFileDialog</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmolight/AtmoLight_1.0.19017.1.mpe1</OnlineLocation>
-    <ReleaseDate>2014-02-23T10:45:58</ReleaseDate>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmolight/AtmoLight_1.0.19019.0.mpe1</OnlineLocation>
+    <ReleaseDate>2014-02-24T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
     <Location>..\..\MPEI Release\Atmolight\[Name]_[Version].mpe1</Location>
     <Params>
@@ -465,7 +444,7 @@ thanks to him. </VersionDescription>
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\atmolight.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{429a329c-7cc8-452a-b7ae-47efaaf4fc00}-atmolight.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{6990f30d-0eab-4a4d-948b-520d27e09611}-atmolight.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

@@ -373,7 +373,7 @@ public static void Main(PackageClass packageClass, UnInstallItem item)
       <Major>1</Major>
       <Minor>0</Minor>
       <Build>19020</Build>
-      <Revision>0</Revision>
+      <Revision>1</Revision>
     </Version>
     <ExtensionDescription>Plugin for using AtmoWin Ambilight Software with MediaPortal. No need to switch AERO off anymore! 
 
@@ -384,12 +384,14 @@ Atmowin : which will be installed/updated automatically while installing!!!
 
 MPCoreChanger  : MediaPortal 1.5 or older
 Since MediaPortal 1.6 : Change are available in Official build. </ExtensionDescription>
-    <VersionDescription>Version 1.1.19020.0
+    <VersionDescription>Version 1.1.19020.01
 
 BassFan add :
-add language file for Atmolight configuration. </VersionDescription>
+add language file for Atmolight configuration. 
+
+Solving bug for load default language at first start.</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmolight/AtmoLight_1.0.19020.0.mpe1</OnlineLocation>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmolight/AtmoLight_1.0.19020.1.mpe1</OnlineLocation>
     <ReleaseDate>2014-02-26T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
     <Location>..\..\MPEI Release\Atmolight\[Name]_[Version].mpe1</Location>
@@ -473,7 +475,7 @@ add language file for Atmolight configuration. </VersionDescription>
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\atmolight.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{04b13313-b084-4ec4-8fa7-f5b4dcba5ff1}-atmolight.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{b64228ff-d602-40eb-9aa7-27c8c8f0ce68}-atmolight.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

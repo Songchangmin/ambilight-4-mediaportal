@@ -1,3 +1,8 @@
+Version 1.1.19020.0
+Add language translation to Atmolight configuration. 
+English / German 
+
+
 Version 1.1.19019.0 
 1.Change DropDown to DropDownList so do not can rename any from the List.
 2.Checking for Disable/Enable state from Configuration.exe

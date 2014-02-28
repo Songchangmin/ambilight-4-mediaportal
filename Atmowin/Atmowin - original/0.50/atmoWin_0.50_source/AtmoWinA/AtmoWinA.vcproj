@@ -783,6 +783,48 @@
 					</FileConfiguration>
 				</File>
 				<File
+					RelativePath=".\KarateConnection.cpp">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release_16x9|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\libkarate.c">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release_16x9|Win32">
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="0"/>
+					</FileConfiguration>
+				</File>
+				<File
 					RelativePath=".\MoMoConnection.cpp">
 					<FileConfiguration
 						Name="Debug|Win32">
@@ -886,6 +928,12 @@
 				</File>
 				<File
 					RelativePath=".\FnordlichtConnection.h">
+				</File>
+				<File
+					RelativePath=".\KarateConnection.h">
+				</File>
+				<File
+					RelativePath=".\libkarate.h">
 				</File>
 				<File
 					RelativePath=".\MoMoConnection.h">
@@ -1013,10 +1061,10 @@
 					RelativePath=".\AtmoConfig.h">
 				</File>
 				<File
-					RelativePath=".\AtmoDisplays.h">
+					RelativePath=".\basics\AtmoDisplays.h">
 				</File>
 				<File
-					RelativePath=".\basics\AtmoDisplays.h">
+					RelativePath=".\AtmoDisplays.h">
 				</File>
 				<File
 					RelativePath=".\AtmoDynData.h">

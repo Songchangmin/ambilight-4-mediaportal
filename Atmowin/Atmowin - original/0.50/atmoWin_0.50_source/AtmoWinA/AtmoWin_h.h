@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 6.00.0361 */
-/* at Sat Feb 18 16:43:04 2012
+/* at Sat Jun 16 11:59:45 2012
  */
 /* Compiler settings for .\AtmoWin.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)

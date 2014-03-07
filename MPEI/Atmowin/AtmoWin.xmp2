@@ -437,6 +437,41 @@
               <ZipFileName>Installer{CopyFile}\{a9fe5120-9bdc-4af0-a07c-71dcaff5e6bd}-3Dlut.3dl</ZipFileName>
               <DestinationFilename>%Config%\Atmowin\3Dlut.3dl</DestinationFilename>
             </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>AlwaysOverwrite</UpdateOption>
+              <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Dutch.lng</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{14025abf-ff81-4ef0-881a-3dcb57c8004b}-Dutch.lng</ZipFileName>
+              <DestinationFilename>%Config%\Atmowin\Dutch.lng</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>AlwaysOverwrite</UpdateOption>
+              <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\English.lng</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{e99cabd8-43ed-40d0-a3ad-5cfe0d98dca4}-English.lng</ZipFileName>
+              <DestinationFilename>%Config%\Atmowin\English.lng</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>AlwaysOverwrite</UpdateOption>
+              <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\France.lng</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{85f18b82-453a-453d-a427-a740257c6a17}-France.lng</ZipFileName>
+              <DestinationFilename>%Config%\Atmowin\France.lng</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>AlwaysOverwrite</UpdateOption>
+              <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\German.lng</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{3da63251-5926-46d9-80e3-cbe60b21d8b2}-German.lng</ZipFileName>
+              <DestinationFilename>%Config%\Atmowin\German.lng</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>AlwaysOverwrite</UpdateOption>
+              <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Spanish.lng</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{33ff203e-111d-4146-941e-64324b9612ba}-Spanish.lng</ZipFileName>
+              <DestinationFilename>%Config%\Atmowin\Spanish.lng</DestinationFilename>
+            </FileItem>
           </Items>
         </Files>
       </GroupItem>
@@ -834,22 +869,20 @@ public class Script
       <Major>1</Major>
       <Minor>0</Minor>
       <Build>0</Build>
-      <Revision>2</Revision>
+      <Revision>3</Revision>
     </Version>
-    <ExtensionDescription>AtmoWin Software for Ambilight systeml. No need to switch AERO off anymore! 
-
-
-
-
-
+    <ExtensionDescription>AtmoWin Software for Ambilight systeml. No need to switch AERO off anymore! 
+
+
+
+
+
 AtmoWin needs an additional plugin (MPCoreChanger &amp; Atmolight) which will be installed/updated automatically while installing!!! </ExtensionDescription>
-    <VersionDescription>Version 1.0.0.2
-Add KarateLight device ( cloned from 0.51 )
-Add Visual Styles and changed any in Channel assignment Dialog
-Correct Build with Comctl32.lib error link. </VersionDescription>
+    <VersionDescription>Version 1.0.0.3
+Add Multi-language support on GUI Screen,</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.2.mpe1</OnlineLocation>
-    <ReleaseDate>2013-08-25T10:45:58</ReleaseDate>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.3.mpe1</OnlineLocation>
+    <ReleaseDate>2014-03-07T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
     <Location>../../MPEI Release/Atmowin/[Name]_[Version].mpe1</Location>
     <Params>
@@ -1313,11 +1346,46 @@ Correct Build with Comctl32.lib error link. </VersionDescription>
         <ZipFileName>Installer{CopyFile}\{a9fe5120-9bdc-4af0-a07c-71dcaff5e6bd}-3Dlut.3dl</ZipFileName>
         <DestinationFilename>%Config%\Atmowin\3Dlut.3dl</DestinationFilename>
       </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>AlwaysOverwrite</UpdateOption>
+        <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Dutch.lng</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{14025abf-ff81-4ef0-881a-3dcb57c8004b}-Dutch.lng</ZipFileName>
+        <DestinationFilename>%Config%\Atmowin\Dutch.lng</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>AlwaysOverwrite</UpdateOption>
+        <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\English.lng</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e99cabd8-43ed-40d0-a3ad-5cfe0d98dca4}-English.lng</ZipFileName>
+        <DestinationFilename>%Config%\Atmowin\English.lng</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>AlwaysOverwrite</UpdateOption>
+        <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\France.lng</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{85f18b82-453a-453d-a427-a740257c6a17}-France.lng</ZipFileName>
+        <DestinationFilename>%Config%\Atmowin\France.lng</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>AlwaysOverwrite</UpdateOption>
+        <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\German.lng</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{3da63251-5926-46d9-80e3-cbe60b21d8b2}-German.lng</ZipFileName>
+        <DestinationFilename>%Config%\Atmowin\German.lng</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>AlwaysOverwrite</UpdateOption>
+        <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Spanish.lng</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{33ff203e-111d-4146-941e-64324b9612ba}-Spanish.lng</ZipFileName>
+        <DestinationFilename>%Config%\Atmowin\Spanish.lng</DestinationFilename>
+      </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\AtmoWin-mpei.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{9a1b1182-886b-4f47-ac98-eeedcb1b0475}-AtmoWin-mpei.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{d658af80-aae7-467f-a87f-7d7c4da95a74}-AtmoWin-mpei.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

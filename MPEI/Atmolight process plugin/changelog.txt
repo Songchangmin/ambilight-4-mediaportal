@@ -1,17 +1,45 @@
+Version 1.10.0.0
+- Fixed issue where LEDs would not turn off (SEDU)
+- Enhanced the logic to start the ambilight
+- Added "Menu Mode" (using ambilight while in MediaPortal GUI)
+- Added static effect option to Video, Radio and Music
+- Changed "STOP Menu" into "Color Button Menu"
+	* Added possibility to open context menu during playback
+	* Added option to change effects on the fly
+	* Added option to change AtmoWin profile
+	* Added option to toggle and set LED delay (see point 10)
+	* Added option to change static color on the fly
+- Fixed issue where context menu was not closeable with back button
+- Added language file support to context menu
+- Added option to assign "None" as On/Off, Profile and Menu button (preventing conflicts)
+- Added delay of 1 second between starting AtmoWin and connecting to it (testing)
+- Added option to set a delay for the leds (if leds change colors before tv does)
+- Enhanced logging capabilities
+- Added lots of error handling routines
+- Added possibility to restart AtmoWin and reconnect to it if something goes wrong
+- Added synchronisation for liveview source with AtmoWin
+- Added French language file
+- Language file updates
+
+
+
+Version 1.1.19020.1
+ Correct First plugin start : Default language not set correctly at 1st start. (BassFan)
+
 Version 1.1.19020.0
-Add language translation to Atmolight configuration. 
-English / German 
+Add language translation to Atmolight configuration. (BassFan)
+English / German (BassFan)
 
 
 Version 1.1.19019.0 
-1.Change DropDown to DropDownList so do not can rename any from the List.
-2.Checking for Disable/Enable state from Configuration.exe
-3.Add Start and Exit Option to Config Dialog.
-4.Add Versions-Info to Config Dialog
-5.fixed Windowsize of Config Dialog
-6.Moved to lates version from angie05 to
-7.Use latest AtmoWinA from angie05 to
-8.Add check for use the right Filename do for OpenFileDialog
+1.Change DropDown to DropDownList so do not can rename any from the List. (BassFan)
+2.Checking for Disable/Enable state from Configuration.exe (BassFan)
+3.Add Start and Exit Option to Config Dialog. (BassFan)
+4.Add Versions-Info to Config Dialog (BassFan)
+5.fixed Windowsize of Config Dialog (BassFan)
+6.Moved to lates version from angie05 to (BassFan)
+7.Use latest AtmoWinA from angie05 to (BassFan)
+8.Add check for use the right Filename do for OpenFileDialog (BassFan)
 
 Version 1.1.19017.1
 

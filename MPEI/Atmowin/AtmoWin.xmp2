@@ -889,7 +889,7 @@ Fix various small bug
 /// VC++ 2012 x86 : http://www.microsoft.com/en-us/download/details.aspx?id=30679             	///
 /// VC++ 2013 x86 : http://www.microsoft.com/en-us/download/details.aspx?id=40784             	///
 ///////////////////////////////////////////////////////////////////////////////////////////////////</VersionDescription>
-    <DevelopmentStatus>Rc</DevelopmentStatus>
+    <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.5.mpe1</OnlineLocation>
     <ReleaseDate>2014-04-01T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
@@ -1394,7 +1394,7 @@ Fix various small bug
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\AtmoWin-mpei.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{60276159-d728-4195-a7cf-669cc38c2427}-AtmoWin-mpei.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{608048b3-a241-41d6-a663-d5eed652a7b5}-AtmoWin-mpei.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

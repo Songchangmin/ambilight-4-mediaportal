@@ -1,23 +1,19 @@
-//#define FORCE_SOFTWARE_SPI
-//#define FORCE_SOFTWARE_PINS
-#include "FastLED.h"
+#include <FastLED.h>
 
-// How many leds are in the strip?
+// Set the number of leds in the strip.
 #define NUM_LEDS 50
 
-// Data pin that led data will be written out over
+// data and clock pins
 //#define DATA_PIN 2
-
-// Clock pin only needed for SPI based chipsets when not using hardware SPI
 //#define CLOCK_PIN 13
 
-// This is an array of leds.  One item for each led in your strip.
 CRGB leds[NUM_LEDS];
 
 void setup(){
+  Serial.begin(115200);
   
   //sanity check delay - allows reprogramming if accidently blowing power w/leds
-  delay(3000);
+  delay(2000);
    
   //Change this to match your led strip
   
@@ -40,28 +36,45 @@ void setup(){
       //FastLED.addLeds<WS2801, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
       // FastLED.addLeds<SM16716, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
       // FastLED.addLeds<LPD8806, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
-  
-  Serial.begin(230400);
+  setupLEDs();
+  clearLeds();
 }
 
 int readByte(){
-  while(Serial.available()==0){
-  }
+  while (Serial.available() == 0){ /* wait for data */ }
   return Serial.read();
 }
 
-void loop(){
-  if(readByte() == 0xFF){
-    if(readByte() == 0x00){
-      if(readByte() == 0x00){
-        int channels = readByte();
-        for(int channel=0; channel<channels; channel++){
-          leds[channel].r = readByte();
-          leds[channel].g = readByte();
-          leds[channel].b = readByte();
+void clearLeds(){
+  for(int dot = 0; dot < NUM_LEDS; dot++){
+    leds[dot] = CRGB::Black; 
+  };
+  FastLED.show();
+}
+
+// shows colored LEDs for 500ms then blanks out ready to go
+void setupLEDs()
+{
+memset(leds,150, sizeof(leds));
+FastLED.show();
+delay(500);
+memset(leds,0, sizeof(leds));
+FastLED.show();
+}
+
+void loop() { 
+  if(readByte() == 0xD7){
+    if(readByte() == 0xEE){
+      if(readByte() == 0x23){
+        int channels = readByte() + 1;
+        for(int dot = 0; dot < channels; dot++){
+          leds[dot].r = readByte();
+          leds[dot].g = readByte();
+          leds[dot].b = readByte();
         }
         FastLED.show();
       }
     }
   }
 }
+

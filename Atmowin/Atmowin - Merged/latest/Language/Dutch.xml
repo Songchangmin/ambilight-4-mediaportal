@@ -5,8 +5,8 @@
         <setting name="1" value="Taal" />
         <setting name="2" value="Modus" />
         <setting name="3" value="Geen effect" />
-        <setting name="4" value="Live beeld" />
-        <setting name="5" value="Vaste kleur" />
+        <setting name="4" value="Vaste kleur" />
+        <setting name="5" value="Live beeld" />
         <setting name="6" value="Kleur wisselaar" />
         <setting name="7" value="Kleur wisselaar LR" />
         <setting name="8" value="Kanaaltoewijzing" />
@@ -34,8 +34,8 @@
     </section>
     <section name="SettingsDialog">
         <setting name="0" value="Geen effect" />
-        <setting name="1" value="Live beeld" />
-        <setting name="2" value="Vaste kleur" />
+        <setting name="1" value="Vaste kleur" />
+        <setting name="2" value="Live beeld" />
         <setting name="3" value="Kleur wisselaar" />
         <setting name="4" value="Kleur wisselaar LR" />
         <setting name="5" value="Verbonden!" />
@@ -88,6 +88,7 @@
         <setting name="52" value="Profielen" />
         <setting name="53" value="Laad" />
         <setting name="54" value="Standaard" />
+		<setting name="55" value="Verbeterde 'Live beeld' weergave (Windows 8+)" />
     </section>
     <section name="Gradients">
         <setting name="0" value="Zone" />
@@ -161,7 +162,7 @@
         <setting name="0" value="Annuleer" />
         <setting name="1" value="Interface:" />
         <setting name="2" value="Verbinding:" />
-        <setting name="3" value="Aantal LED&apos;s" />
+        <setting name="3" value="Aantal LEDs" />
         <setting name="4" value="Snelheid" />
     </section>
     <section name="Dmxsetup">
@@ -201,7 +202,7 @@
         <setting name="5" value="Aantal kanalen buiten bereik 1 > 255" />
         <setting name="6" value="Fout" />
     </section>
-		<section name="Messages">
+	<section name="Messages">
 		<setting name="0" value="Dit apparaat heeft geen configuratie nodig" />
 		<setting name="1" value="Informatie" />
 		<setting name="2" value="Verbonden" />
@@ -232,4 +233,5 @@
 		<setting name="27" value="met foutcode:" />
 		<setting name="28" value="Weergave-instellingen veranderd. Controleer de instellingen." />
 	</section>
+
 </configuration>

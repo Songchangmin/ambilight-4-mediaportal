@@ -7,6 +7,13 @@
 #  https://github.com/ambilight-4-mediaportal
 #
 
+Version 1.0.0.6 : 2014.04.24
+BugsFix. (BassFan)
+Atmoduino V2 (NevCairiel) + rework the import (Azzuro)
+Win8 Desktop Duplication API  (NevCairiel)
+Max zone correction (Nevcairiel)
+Increase capture to 170x96 for Release_16x9 build (default build/Release is always 64x48) (NevCairiel)
+
 Version 1.0.0.5 : 2014.04.01
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

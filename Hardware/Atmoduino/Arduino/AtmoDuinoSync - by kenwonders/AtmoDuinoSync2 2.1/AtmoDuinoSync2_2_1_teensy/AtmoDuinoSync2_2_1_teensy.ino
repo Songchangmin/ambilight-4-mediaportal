@@ -27,7 +27,7 @@
 // settings - change these to suit
 const int NUM_LEDS = 50; // number of LEDs in set
 const unsigned long SERIAL_TIMEOUT = 60000; // milliseconds delay after last contact to clear LEDs
-const unsigned long STREAM_DELAY = 150; // milliseconds delay in stream to LEDs
+const unsigned long STREAM_DELAY = 5; // milliseconds delay in stream to LEDs
 /*
  see the FastSPI_LED2 library for details about how to change the addLeds call below to suit your LED set
  */
@@ -59,7 +59,7 @@ boolean serialLineClear = true;
 // setup
 void setup(){
   //open serial port
-  Serial.begin(115200);
+  Serial.begin(230400);
   //add LEDs to FastSPI (find the appropriate driver for you)
   //FastLED.addLeds<WS2801, 2, 1, RGB, 20>(leds, NUM_LEDS);
        

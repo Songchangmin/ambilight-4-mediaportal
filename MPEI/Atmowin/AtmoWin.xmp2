@@ -465,13 +465,6 @@
               <ZipFileName>Installer{CopyFile}\{13308f09-124d-4d86-ad4a-e3f4d1cbe19c}-German.xml</ZipFileName>
               <DestinationFilename>%Config%\Atmowin\Language\German.xml</DestinationFilename>
             </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Language\Spanish.lng</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{6d3b5c60-4a05-40c6-8a97-c3ad5d88954e}-Spanish.lng</ZipFileName>
-              <DestinationFilename>%Config%\Atmowin\Language\Spanish.lng</DestinationFilename>
-            </FileItem>
           </Items>
         </Files>
       </GroupItem>
@@ -542,6 +535,55 @@ The AtmoLight process plugin needs the MPCoreChanger plugin to replace the origi
         </Params>
         <Actions>
           <Items>
+            <ActionItem Name="Kill Atmowin" ActionType="Script" ConditionGroup="">
+              <Params>
+                <Items>
+                  <SectionParam Name="Script">
+                    <Value>//css_reference "MpeCore.dll";
+
+using MpeCore.Classes;
+using MpeCore;
+using System;
+using System.Diagnostics;
+using System.Windows.Forms;
+
+public class Script
+{
+    public static void Main(PackageClass packageClass, ActionItem actionItem)
+    {
+//kill AtmoWin process to make sure the .exe file can be deleted/overwritten if needed
+     Process[] pp = Process.GetProcessesByName("AtmoWinA");
+     foreach (Process p in pp)
+    {
+        p.Kill();
+    }
+    }
+}
+</Value>
+                    <ValueType>Script</ValueType>
+                    <Description />
+                  </SectionParam>
+                  <SectionParam Name="Uninstall Script">
+                    <Value>//css_reference "MpeCore.dll";
+
+using MpeCore.Classes;
+using MpeCore;
+
+public class Script
+{
+    public static void Main(PackageClass packageClass, UnInstallItem item)
+    {
+        return;
+    }
+}
+</Value>
+                    <ValueType>Script</ValueType>
+                    <Description />
+                  </SectionParam>
+                </Items>
+              </Params>
+              <ExecuteLocation>BeforPanelShow</ExecuteLocation>
+            </ActionItem>
             <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="">
               <Params>
                 <Items />
@@ -687,82 +729,6 @@ public class Script
               </Params>
               <ExecuteLocation>BeforPanelShow</ExecuteLocation>
             </ActionItem>
-            <ActionItem Name="Extension Installer MPCorechanger" ActionType="Extension Installer" ConditionGroup="">
-              <Params>
-                <Items>
-                  <SectionParam Name="Extension package">
-                    <Value />
-                    <ValueType>File</ValueType>
-                    <Description>Location of the extension package</Description>
-                  </SectionParam>
-                  <SectionParam Name="Extension Id">
-                    <Value>8d2c6d9d-03c8-4144-b0b8-85e3a2b0e001</Value>
-                    <ValueType>String</ValueType>
-                    <Description>Global Id of the extension package - it will be downloaded when no file is set.</Description>
-                  </SectionParam>
-                  <SectionParam Name="Extension Version">
-                    <Value>1.0.0.1</Value>
-                    <ValueType>String</ValueType>
-                    <Description>Minimum Version of the extension package - older versions will be updated (only used when downloading via Id).</Description>
-                  </SectionParam>
-                  <SectionParam Name="Silent Install">
-                    <Value>YES</Value>
-                    <ValueType>Bool</ValueType>
-                    <Description>Silent install, No wizard screen will be displayed </Description>
-                  </SectionParam>
-                </Items>
-              </Params>
-              <ExecuteLocation>AfterPanelShow</ExecuteLocation>
-            </ActionItem>
-            <ActionItem Name="Script" ActionType="Script" ConditionGroup="">
-              <Params>
-                <Items>
-                  <SectionParam Name="Script">
-                    <Value>//css_reference "MpeCore.dll";
-
-using MpeCore.Classes;
-using MpeCore;
-using System;
-using System.Diagnostics;
-using System.Windows.Forms;
-
-public class Script
-{
-    public static void Main(PackageClass packageClass, ActionItem actionItem)
-    {
-//kill AtmoWin process to make sure the .exe file can be deleted/overwritten if needed
-     Process[] pp = Process.GetProcessesByName("AtmoWinA");
-     foreach (Process p in pp)
-    {
-        p.Kill();
-    }
-    }
-}
-</Value>
-                    <ValueType>Script</ValueType>
-                    <Description />
-                  </SectionParam>
-                  <SectionParam Name="Uninstall Script">
-                    <Value>//css_reference "MpeCore.dll";
-
-using MpeCore.Classes;
-using MpeCore;
-
-public class Script
-{
-    public static void Main(PackageClass packageClass, UnInstallItem item)
-    {
-        return;
-    }
-}
-</Value>
-                    <ValueType>Script</ValueType>
-                    <Description />
-                  </SectionParam>
-                </Items>
-              </Params>
-              <ExecuteLocation>BeforPanelShow</ExecuteLocation>
-            </ActionItem>
           </Items>
         </Actions>
         <IncludedGroups />
@@ -861,7 +827,7 @@ public class Script
   <GeneralInfo>
     <Name>AtmoWin</Name>
     <Id>e0802934-4e24-4b0c-bf8c-a6f35af1093a</Id>
-    <Author>Angie05 , RickDB , legnod (installer), azzuro(Teensy), André Weber, Matthiaz, MacGyver2k, swifty</Author>
+    <Author>Angie05 , RickDB , legnod (installer), azzuro(Teensy), André Weber, Matthiaz, MacGyver2k, swifty, BassFan, NevCairiel</Author>
     <HomePage>https://code.google.com/p/ambilight-4-mediaportal/</HomePage>
     <ForumPage>http://forum.team-mediaportal.com/forums/ambient-lighting-system.671/</ForumPage>
     <UpdateUrl>http://ambilight-4-mediaportal.googlecode.com/git/MPEI/Atmowin/Atmowin_update.xml</UpdateUrl>
@@ -869,29 +835,20 @@ public class Script
       <Major>1</Major>
       <Minor>0</Minor>
       <Build>0</Build>
-      <Revision>5</Revision>
+      <Revision>6</Revision>
     </Version>
     <ExtensionDescription>AtmoWin Software for Ambilight systeml. No need to switch AERO off anymore! 
 
 AtmoWin needs an additional plugin (MPCoreChanger &amp; Atmolight) which will be installed/updated automatically while installing!!! </ExtensionDescription>
-    <VersionDescription>Version 1.0.0.5
-Moved setting from registry to XML file. ( thanks to BassFan :-] )
-Fix Enum display (needed fix for Win8 use) ( From NevCairiel fork "thanks" )
-Fix various small bug
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-///                                                                                           	                                                ///
-/// Please before Update to this version, Make backup of your setting with screenshots        	///
-/// All your setting are not lost, but are not used anymore with the rework of moving setting 	                ///
-///                                                       					                                /// 
-/// On Error for launch Atmowin :                      					 	///
-/// Please install these package before use :                                                 	                                ///
-/// VC++ 2012 x86 : http://www.microsoft.com/en-us/download/details.aspx?id=30679             	///
-/// VC++ 2013 x86 : http://www.microsoft.com/en-us/download/details.aspx?id=40784             	///
-///////////////////////////////////////////////////////////////////////////////////////////////////</VersionDescription>
+    <VersionDescription>Version 1.0.0.6
+BugsFix. (BassFan)
+Atmoduino V2 (NevCairiel) + rework the import (Azzuro)
+Win8 Desktop Duplication API  (NevCairiel)
+Max zone correction (Nevcairiel)
+Increase capture to 170x96 for Release_16x9 build (default build/Release is always 64x48) (NevCairiel)</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.5.mpe1</OnlineLocation>
-    <ReleaseDate>2014-04-01T10:45:58</ReleaseDate>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.6.mpe1</OnlineLocation>
+    <ReleaseDate>2014-04-24T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
     <Location>../../MPEI Release/Atmowin/[Name]_[Version].mpe1</Location>
     <Params>
@@ -1383,18 +1340,11 @@ Fix various small bug
         <ZipFileName>Installer{CopyFile}\{13308f09-124d-4d86-ad4a-e3f4d1cbe19c}-German.xml</ZipFileName>
         <DestinationFilename>%Config%\Atmowin\Language\German.xml</DestinationFilename>
       </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Language\Spanish.lng</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{6d3b5c60-4a05-40c6-8a97-c3ad5d88954e}-Spanish.lng</ZipFileName>
-        <DestinationFilename>%Config%\Atmowin\Language\Spanish.lng</DestinationFilename>
-      </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\AtmoWin-mpei.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{608048b3-a241-41d6-a663-d5eed652a7b5}-AtmoWin-mpei.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{f5e1f69d-ddcd-4e5e-a91a-84499fb86ad4}-AtmoWin-mpei.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

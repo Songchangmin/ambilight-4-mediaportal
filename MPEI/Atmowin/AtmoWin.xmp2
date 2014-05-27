@@ -132,13 +132,6 @@
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
               <Param1 />
               <UpdateOption>AlwaysOverwrite</UpdateOption>
-              <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\reg_filter.cmd</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{9dc3b3d6-6294-4d38-9152-0df8a370fd27}-reg_filter.cmd</ZipFileName>
-              <DestinationFilename>%Config%\Atmowin\reg_filter.cmd</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-              <Param1 />
-              <UpdateOption>AlwaysOverwrite</UpdateOption>
               <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\sample-AtmoCtrl.cmd</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{99d849d5-5351-44ec-ab0a-a128b88f1fb8}-sample-AtmoCtrl.cmd</ZipFileName>
               <DestinationFilename>%Config%\Atmowin\sample-AtmoCtrl.cmd</DestinationFilename>
@@ -729,6 +722,49 @@ public class Script
               </Params>
               <ExecuteLocation>BeforPanelShow</ExecuteLocation>
             </ActionItem>
+            <ActionItem Name="RunApplication" ActionType="RunApplication" ConditionGroup="AtmoWin">
+              <Params>
+                <Items>
+                  <SectionParam Name="Path to application">
+                    <Value>%Config%/Atmowin/register.cmd</Value>
+                    <ValueType>Template</ValueType>
+                    <Description>Path to the application like 
+ %Base%\MediaPortal.exe</Description>
+                  </SectionParam>
+                  <SectionParam Name="Parameters for application">
+                    <Value />
+                    <ValueType>String</ValueType>
+                    <Description>Command line parameters</Description>
+                  </SectionParam>
+                  <SectionParam Name="Wait for exit">
+                    <Value />
+                    <ValueType>Bool</ValueType>
+                    <Description>Wait for exit </Description>
+                  </SectionParam>
+                  <SectionParam Name="Don't run when silent install">
+                    <Value />
+                    <ValueType>Bool</ValueType>
+                    <Description>If set to Yes the aplication don't run when the istalation is silent </Description>
+                  </SectionParam>
+                  <SectionParam Name="Path to uninstall application">
+                    <Value />
+                    <ValueType>Template</ValueType>
+                    <Description>Path to the application which should be executed when uninstall</Description>
+                  </SectionParam>
+                  <SectionParam Name="Parameters for uninstall application">
+                    <Value />
+                    <ValueType>String</ValueType>
+                    <Description>Command line parameters for uninstall app</Description>
+                  </SectionParam>
+                  <SectionParam Name="Wait for exit on uninstall">
+                    <Value />
+                    <ValueType>Bool</ValueType>
+                    <Description>Wait for exit on uninstall </Description>
+                  </SectionParam>
+                </Items>
+              </Params>
+              <ExecuteLocation>AfterPanelShow</ExecuteLocation>
+            </ActionItem>
           </Items>
         </Actions>
         <IncludedGroups />
@@ -839,7 +875,9 @@ public class Script
     </Version>
     <ExtensionDescription>AtmoWin Software for Ambilight systeml. No need to switch AERO off anymore! 
 
-AtmoWin needs an additional plugin (MPCoreChanger &amp; Atmolight) which will be installed/updated automatically while installing!!! </ExtensionDescription>
+AtmoWin needs an additional plugin :
+Atmolight: Manage Atmowin 
+MPCoreChanger : For MP &lt;1.6 only. </ExtensionDescription>
     <VersionDescription>Version 1.0.0.6
 BugsFix. (BassFan)
 Atmoduino V2 (NevCairiel) + rework the import (Azzuro)
@@ -1003,13 +1041,6 @@ Increase capture to 170x96 for Release_16x9 build (default build/Release is alwa
         <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\register.cmd</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{d8469688-6299-425e-9b27-33f17b92d077}-register.cmd</ZipFileName>
         <DestinationFilename>%Config%\Atmowin\register.cmd</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
-        <Param1 />
-        <UpdateOption>AlwaysOverwrite</UpdateOption>
-        <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\reg_filter.cmd</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{9dc3b3d6-6294-4d38-9152-0df8a370fd27}-reg_filter.cmd</ZipFileName>
-        <DestinationFilename>%Config%\Atmowin\reg_filter.cmd</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
         <Param1 />

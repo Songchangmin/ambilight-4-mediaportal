@@ -432,28 +432,28 @@
             </FileItem>
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
               <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <UpdateOption>AlwaysOverwrite</UpdateOption>
               <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Language\Dutch.xml</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{b7165b97-8caa-4de4-b03e-737f99d2f62a}-Dutch.xml</ZipFileName>
               <DestinationFilename>%Config%\Atmowin\Language\Dutch.xml</DestinationFilename>
             </FileItem>
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
               <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <UpdateOption>AlwaysOverwrite</UpdateOption>
               <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Language\English.xml</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{357f2141-227c-416f-9659-2186fe7389bb}-English.xml</ZipFileName>
               <DestinationFilename>%Config%\Atmowin\Language\English.xml</DestinationFilename>
             </FileItem>
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
               <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <UpdateOption>AlwaysOverwrite</UpdateOption>
               <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Language\France.xml</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{08881342-307b-472d-a3d0-6ba5d0d6430a}-France.xml</ZipFileName>
               <DestinationFilename>%Config%\Atmowin\Language\France.xml</DestinationFilename>
             </FileItem>
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
               <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <UpdateOption>AlwaysOverwrite</UpdateOption>
               <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Language\German.xml</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{13308f09-124d-4d86-ad4a-e3f4d1cbe19c}-German.xml</ZipFileName>
               <DestinationFilename>%Config%\Atmowin\Language\German.xml</DestinationFilename>
@@ -871,22 +871,22 @@ public class Script
       <Major>1</Major>
       <Minor>0</Minor>
       <Build>0</Build>
-      <Revision>6</Revision>
+      <Revision>7</Revision>
     </Version>
-    <ExtensionDescription>AtmoWin Software for Ambilight systeml. No need to switch AERO off anymore! 
+    <ExtensionDescription>AtmoWin Software for Ambilight systeml. 
 
 AtmoWin needs an additional plugin :
 Atmolight: Manage Atmowin 
 MPCoreChanger : For MP &lt;1.6 only. </ExtensionDescription>
-    <VersionDescription>Version 1.0.0.6
-BugsFix. (BassFan)
-Atmoduino V2 (NevCairiel) + rework the import (Azzuro)
-Win8 Desktop Duplication API  (NevCairiel)
-Max zone correction (Nevcairiel)
-Increase capture to 170x96 for Release_16x9 build (default build/Release is always 64x48) (NevCairiel)</VersionDescription>
+    <VersionDescription>Version 1.0.0.7 :
+Make Atmowin totally "Portable", no more Hardcoded path. for using without MediaPortal. (BassFan)
+ - Language : If no language found, English language is created. (BassFan)
+ - Setting : use the file under root path where is executed Atmowin.exe (BassFan)
+Deactivate the "Save" button for profile, available only when new profile is created, make misunderstanding because used as "Save setting" (BassFan)
+Fixed various error (BassFan)</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.6.mpe1</OnlineLocation>
-    <ReleaseDate>2014-04-24T10:45:58</ReleaseDate>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.7.mpe1</OnlineLocation>
+    <ReleaseDate>2014-06-23T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
     <Location>../../MPEI Release/Atmowin/[Name]_[Version].mpe1</Location>
     <Params>
@@ -1345,28 +1345,28 @@ Increase capture to 170x96 for Release_16x9 build (default build/Release is alwa
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
         <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <UpdateOption>AlwaysOverwrite</UpdateOption>
         <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Language\Dutch.xml</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{b7165b97-8caa-4de4-b03e-737f99d2f62a}-Dutch.xml</ZipFileName>
         <DestinationFilename>%Config%\Atmowin\Language\Dutch.xml</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
         <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <UpdateOption>AlwaysOverwrite</UpdateOption>
         <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Language\English.xml</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{357f2141-227c-416f-9659-2186fe7389bb}-English.xml</ZipFileName>
         <DestinationFilename>%Config%\Atmowin\Language\English.xml</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
         <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <UpdateOption>AlwaysOverwrite</UpdateOption>
         <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Language\France.xml</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{08881342-307b-472d-a3d0-6ba5d0d6430a}-France.xml</ZipFileName>
         <DestinationFilename>%Config%\Atmowin\Language\France.xml</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
         <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <UpdateOption>AlwaysOverwrite</UpdateOption>
         <LocalFileName>..\..\Atmowin\Atmowin - Merged\latest\Language\German.xml</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{13308f09-124d-4d86-ad4a-e3f4d1cbe19c}-German.xml</ZipFileName>
         <DestinationFilename>%Config%\Atmowin\Language\German.xml</DestinationFilename>
@@ -1375,7 +1375,7 @@ Increase capture to 170x96 for Release_16x9 build (default build/Release is alwa
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\AtmoWin-mpei.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{f5e1f69d-ddcd-4e5e-a91a-84499fb86ad4}-AtmoWin-mpei.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{497c6848-9510-4185-b299-0fcca3d99238}-AtmoWin-mpei.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

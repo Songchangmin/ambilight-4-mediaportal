@@ -871,22 +871,20 @@ public class Script
       <Major>1</Major>
       <Minor>0</Minor>
       <Build>0</Build>
-      <Revision>7</Revision>
+      <Revision>8</Revision>
     </Version>
     <ExtensionDescription>AtmoWin Software for Ambilight systeml. 
 
 AtmoWin needs an additional plugin :
 Atmolight: Manage Atmowin 
-MPCoreChanger : For MP &lt;1.6 only. </ExtensionDescription>
-    <VersionDescription>Version 1.0.0.7 :
-Make Atmowin totally "Portable", no more Hardcoded path. for using without MediaPortal. (BassFan)
- - Language : If no language found, English language is created. (BassFan)
- - Setting : use the file under root path where is executed Atmowin.exe (BassFan)
-Deactivate the "Save" button for profile, available only when new profile is created, make misunderstanding because used as "Save setting" (BassFan)
-Fixed various error (BassFan)</VersionDescription>
+
+If MediaPortal &lt; Version 1.6 
+MPCoreChanger </ExtensionDescription>
+    <VersionDescription>Version 1.0.0.8 :
+Correction of save value for Software_gamma_blue in XML (Azzuro)</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.7.mpe1</OnlineLocation>
-    <ReleaseDate>2014-06-23T10:45:58</ReleaseDate>
+    <OnlineLocation>https://ambilight-4-mediaportal.googlecode.com/git/MPEI%20Release/Atmowin/AtmoWin_1.0.0.8.mpe1</OnlineLocation>
+    <ReleaseDate>2014-08-06T10:45:58</ReleaseDate>
     <Tags>sedu-board, atmowin, ws2801, ambilight, teensy 2, atmoduino, ambilight, led</Tags>
     <Location>../../MPEI Release/Atmowin/[Name]_[Version].mpe1</Location>
     <Params>
@@ -1375,7 +1373,7 @@ Fixed various error (BassFan)</VersionDescription>
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>image\AtmoWin-mpei.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{497c6848-9510-4185-b299-0fcca3d99238}-AtmoWin-mpei.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{cc406bf8-ba93-44ff-bdc0-be0c9b94bd36}-AtmoWin-mpei.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>
